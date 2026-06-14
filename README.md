@@ -43,6 +43,18 @@ without exposing confidential operational information.
 
 ---
 
+## 🏢 About EmprendHEC
+
+**EmprendHEC** is the organization where this framework originated and is actively validated in real operations.
+
+It is an education- and entrepreneurship-focused initiative whose mission is to **transform leaders, education, and communities through AI with purpose**. EmprendHEC runs an internal agentic ecosystem — built on the architecture-first, human-first principles described in this repository — to coordinate its own work, governance, and execution.
+
+Throughout this documentation, EmprendHEC appears as the **real-world reference implementation**: the live demo is one private example of the public framework in practice. Only the reusable, public-safe layer is shared here.
+
+🌐 Learn more: [www.emprendhec.com](https://www.emprendhec.com)
+
+---
+
 ## 🔥 The Paradigm Shift
 
 ### Traditional approach
@@ -291,7 +303,7 @@ Then let architecture guide systems, agents, and execution.
 
 Created by  
 **Paulo César Ramírez Silva**  
-Founder & CEO — EmprendHEC
+Founder & CEO — EmprendHEC (https://www.emprendhec.com)
 
 Mission:
 > Transform leaders, education, and communities through AI with purpose.

@@ -1,34 +1,149 @@
-# Disclaimer
+# DISCLAIMER.md
 
-## Purpose of This Repository
+## Public Repository Disclaimer  
+### Protecting Confidential Information and Private Operational Assets
 
-This repository provides a **public architectural reference framework** for building agent-first enterprise systems. It is intended for educational and illustrative purposes only.
+This repository is a **public GitHub repository**.
 
-## No Warranties
+By using, contributing to, or generating content for this repository, you acknowledge that all content published here must be appropriate for **public release**.
 
-The content in this repository is provided **"as is"**, without warranty of any kind, express or implied. The authors make no representations about the suitability, reliability, availability, timeliness, or accuracy of the information contained herein.
+---
 
-## Not a Complete System
+## 1. Repository Purpose
 
-This repository represents a **partial, public-safe view** of a broader architectural approach. It intentionally omits:
+This repository contains the **public architecture, framework, principles, templates, and public-safe examples** for:
 
-- Proprietary business logic and rules
-- Internal system integrations and configurations
-- Private agent implementations and prompts
-- Confidential organizational data or processes
+**Agent-First Enterprise Architecture Builder**
 
-What is shared here is meant to illustrate patterns, principles, and structures — not to serve as a production-ready, copy-paste system.
+It does **not** contain the private production implementation of EmprendHEC’s working operational agentic system.
 
-## No Affiliation
+The live demo and internal working system are separate from this repository because they include confidential operational information that is not approved for public disclosure.
 
-Unless explicitly stated, this project is not officially affiliated with, endorsed by, or sponsored by Microsoft Corporation or any other technology vendor referenced in the documentation.
+---
 
-References to Microsoft 365, GitHub Copilot, Azure, and related products are for illustrative purposes within an architectural context.
+## 2. Confidentiality Rule
 
-## Intellectual Property
+Do **not** upload, generate, commit, paste, or publish confidential, proprietary, or otherwise sensitive information in this repository.
 
-All content is subject to the terms of the [LICENSE](LICENSE) file. Examples and templates are provided for adaptation, not verbatim use.
+This includes, but is not limited to:
 
-## Use at Your Own Risk
+- credentials, secrets, tokens, passwords, connection strings, API keys
+- customer or client data
+- personally identifiable information (PII)
+- internal-only EmprendHEC operational prompts
+- internal business rules not intended for public release
+- proprietary internal workflows
+- confidential implementation details from the demo environment
+- private SharePoint, Teams, Planner, Outlook, or Microsoft 365 operational content
+- private internal report formats or governance artifacts
+- screenshots containing sensitive data
+- pre-release or NDA-protected information
+- private architectural details that expose operational risk
 
-Any organization that adapts this framework for production use does so at their own risk and is responsible for validating its fitness for purpose, security, compliance, and governance requirements.
+---
+
+## 3. Public-Safe Content Only
+
+All content in this repository must be limited to **public-safe, general-level information** suitable for worldwide public access.
+
+Allowed public-safe content includes:
+
+- framework definitions
+- architecture principles
+- public reference patterns
+- abstracted examples
+- placeholder templates
+- diagrams without sensitive data
+- generic documentation patterns
+- implementation scaffolding
+- public-safe educational material
+
+---
+
+## 4. EmprendHEC Demo Boundary
+
+The demo shown for this project validates that the framework is already working in a real environment.
+
+However, the demo environment and operational system are **not** open-sourced here.
+
+Reason:
+they contain confidential information about how EmprendHEC conducts internal operations, governance, and execution.
+
+Therefore, this repository shares:
+- the architecture
+- the framework
+- the mindset
+- public-safe examples
+
+but not:
+- the full operational system
+- the internal production prompts
+- the confidential business implementation
+
+---
+
+## 5. Agent Design Examples
+
+Any agent examples included in this repository must be:
+
+- abstracted
+- genericized
+- public-safe
+- clearly labeled as examples, placeholders, or reference designs
+
+They must **not** be treated as direct exports of the private production implementation.
+
+---
+
+## 6. Responsibility of Contributors
+
+All contributors are responsible for reviewing content before publishing.
+
+Before any commit or pull request, verify:
+
+- no secrets are included
+- no private operational data is included
+- no PII is included
+- no confidential internal business knowledge is included
+- no screenshots expose sensitive information
+- examples are clearly public-safe
+
+If there is uncertainty, do **not** publish the content until it is reviewed and sanitized.
+
+---
+
+## 7. Security and Governance
+
+This repository is intended to reflect a governance-first mindset.
+
+That means:
+
+- human judgment remains central
+- sensitive information is protected
+- architecture is shared responsibly
+- public and private layers remain clearly separated
+
+---
+
+## 8. No Warranty of Production Readiness
+
+Public examples and templates in this repository are provided for learning, reference, and adaptation.
+
+They are not automatically production-ready.
+
+Users and implementers are responsible for:
+- security review
+- governance review
+- legal/compliance review
+- contextual adaptation to their own organization
+
+---
+
+## 9. Final Rule
+
+If content would expose confidential information, it does not belong in this repository.
+
+When in doubt:
+
+> publish the architecture  
+> keep the operations private

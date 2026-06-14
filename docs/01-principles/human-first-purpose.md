@@ -38,6 +38,13 @@ The human-first principle creates a forcing function: **every agent must be just
 
 It means the **design intent** is always traceable back to human purpose, and that the system preserves meaningful human oversight.
 
+## Complementary Reading — The Human Side
+
+These articles expand the **human-first** foundation of this framework, framing human–AI co-creation as a way to keep human judgment central and minds sharp rather than diminished. They are complementary perspectives, not normative parts of the principle itself.
+
+- **English** — [Human–AI Co-Creation: The Smartest Way to Stay Mentally Sharp](https://www.linkedin.com/pulse/human-ai-co-creation-smartest-way-stay-mentally-sharp-ram%C3%ADrez-silva-e5nme)
+- **Spanish** — [Co-creación humana–IA](https://www.emprendhec.com/post/co-creacion-humana-ia)
+
 ## Related Principles
 
 - [`source-of-truth.md`](source-of-truth.md) — Agents rely on human-curated knowledge
