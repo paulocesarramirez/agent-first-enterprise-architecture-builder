@@ -1,46 +1,72 @@
-# GitHub Copilot Instructions
+# GitHub Copilot Instructions for this Repository
 
-## Project Context
+## Repository Purpose & Positioning
+This repository is the public architecture, framework, and reference patterns for:
+**Agent-First Enterprise Architecture Builder** — a reference framework for designing, governing, and evolving enterprise systems that place AI agents at the center of business operations. Its thesis: **agents are first-class citizens** of the enterprise, not add-ons.
 
-This repository is the **Agent-First Enterprise Architecture Builder** — a public reference framework for designing, governing, and evolving enterprise systems that place AI agents at the center of business operations.
+Always preserve this category definition:
+- This project is an **architecture**, a **framework**, and a **mindset**.
+- It is NOT the private production implementation of EmprendHEC's operational agentic system.
+- The live demo is **one private implementation example**; this repo shares only the **reusable, public-safe layer**.
 
-The architecture is built on the principle that **agents are first-class citizens** of the enterprise, not add-ons. Everything in this repo supports that thesis.
+## Human-Centered Rule
+All generated content must reflect **Agent-First Infrastructure, Human-First Purpose**:
+- AI/agents amplify human capability; human judgment remains central.
+- Governance, auditability, and transparency are required.
+- Documentation should reduce friction without reducing human strategic involvement.
 
-## How to Help in This Repo
+## Architecture Thinking
+When assisting with design or documentation:
+- Always consider the **full stack**: knowledge layer → governance layer → generation layer → execution layer.
+- Ask "what is the agent's purpose?" before proposing any design.
+- Reference existing framework files in `docs/02-framework/` when applicable.
 
-When assisting with this repository, Copilot should:
+## Public-Safe Content Rule
+This is the governing constraint for everything generated — files, docs, code scaffolding, examples, diagrams, and templates.
 
-### Tone and Style
-- Write in a **clear, structured, professional tone**
-- Favor **concrete examples** over abstract theory
-- Use **Markdown headers, bullet points, and tables** for all documentation
-- Keep files **focused** — one concept per document
+**Always:**
+- Use only public-safe, generic, non-confidential information.
+- Keep agent examples abstracted, genericized, and clearly labeled as examples or placeholders.
+- Maintain explicit boundaries between public examples and private implementation.
 
-### Architecture Thinking
-- Always consider the **full stack**: knowledge layer → governance layer → generation layer → execution layer
-- Ask "what is the agent's purpose?" before proposing any design
-- Reference existing framework files in `docs/02-framework/` when applicable
+**Never:**
+- Invent or expose internal operational details of EmprendHEC, including private prompts, confidential workflows, live decision rules, or proprietary data structures (unless explicitly approved for public release).
+- Include secrets, credentials, endpoints, customer/client data, PII, or internal business logic.
+- Export the private working system directly, or imply illustrative examples are production-ready.
 
-### Content Safety
-- **Never include** proprietary system names, credentials, or internal process details
-- Examples must be **illustrative and generic** — suitable for public viewing
-- When in doubt, use placeholder names like `[YourOrg]`, `[YourSystem]`, `[YourProcess]`
+**If an artifact would require confidential information:**
+- Do not fabricate or infer it.
+- Generate a public-safe placeholder and explicitly label the missing content as private implementation detail.
 
-### File Conventions
-- Follow naming conventions in `docs/05-copilot-implementation/naming-conventions.md`
-- New docs go in the appropriate `docs/0X-` folder
-- New examples go in `examples/` and must end in `.example.md`
-- Diagrams go in `examples/diagrams/` and use `.mmd` (Mermaid) format
+## Allowed Artifacts
+Copilot may generate:
+- markdown documentation, diagrams, and example templates
+- placeholder config files and public-safe code scaffolds
+- starter kits, generic agent design patterns, and file/folder structures
 
-### What NOT to Do
-- Do not generate executable code for production deployment
-- Do not create files outside the defined folder structure without discussion
-- Do not add agent prompts that reference private internal systems
-- Do not modify `docs/01-principles/` without explicit instruction — these are foundational
+Do **not** generate executable code for production deployment.
+
+## Documentation & Writing Style
+Prioritize (in order): **clarity → explicit structure → modularity → governance → public-safe examples**.
+
+- Use precise, architectural language with a professional documentation tone.
+- Use strong structural headings, Markdown bullet points, and tables.
+- Favor **concrete examples** over abstract theory.
+- Keep files **focused** — one concept per document.
+
+## File & Naming Conventions
+- Follow `docs/05-copilot-implementation/naming-conventions.md`.
+- Prefer descriptive, architecture-oriented prefixes: `architecture-*`, `framework-*`, `public-safe-*`, `example-*`, `placeholder-*`, `governance-*`.
+- Use placeholder names like `[YourOrg]`, `[YourSystem]`, `[YourProcess]` when in doubt.
+- New docs go in the appropriate `docs/0X-` folder.
+- New examples go in `examples/` and must end in `.example.md`.
+- Diagrams go in `examples/diagrams/` and use `.mmd` (Mermaid) format.
+- Do not create files outside the defined folder structure without discussion.
+- Do not modify `docs/01-principles/` without explicit instruction — these are foundational.
 
 ## Key Files to Reference
-
 - `docs/00-overview/architecture-overview.md` — Start here for context
 - `docs/02-framework/architecture-layers.md` — The core layered model
 - `docs/03-agent-design-patterns/common-agent-contract.md` — Standard agent structure
 - `docs/05-copilot-implementation/safe-scaffolding-instructions.md` — How to add new content safely
+- `docs/05-copilot-implementation/naming-conventions.md` — File and folder naming rules
