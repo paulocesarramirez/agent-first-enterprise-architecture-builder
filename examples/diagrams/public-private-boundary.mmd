@@ -1,0 +1,38 @@
+%%{init: {'theme': 'default'}}%%
+flowchart TD
+    subgraph PUBLIC["Public Repository (This Repo)"]
+        PUB1[Architectural Principles]
+        PUB2[Four-Layer Framework]
+        PUB3[Agent Design Patterns]
+        PUB4[Generic Examples]
+        PUB5[Diagrams & Templates]
+        PUB6[Starter Kits]
+    end
+
+    subgraph BOUNDARY["The Boundary"]
+        B1{Public-Safe Test}
+        B2[Generalizable?]
+        B3[No proprietary data?]
+        B4[No credentials?]
+        B5[Illustrative only?]
+    end
+
+    subgraph PRIVATE["Private Implementation"]
+        PRV1[Real Business Rules]
+        PRV2[Live Agent Prompts]
+        PRV3[Organizational Knowledge]
+        PRV4[System Integrations]
+        PRV5[Operational Data]
+        PRV6[Internal Configurations]
+    end
+
+    B1 --> B2 & B3 & B4 & B5
+    B2 & B3 & B4 & B5 -->|All Yes| PUBLIC
+    B2 & B3 & B4 & B5 -->|Any No| PRIVATE
+
+    PUBLIC -.->|Provides structure for| PRIVATE
+    PRIVATE -.->|Inspires patterns in| PUBLIC
+
+    style PUBLIC fill:#dcfce7,stroke:#16a34a,color:#14532d
+    style BOUNDARY fill:#fef9c3,stroke:#ca8a04,color:#422006
+    style PRIVATE fill:#fee2e2,stroke:#dc2626,color:#450a0a
