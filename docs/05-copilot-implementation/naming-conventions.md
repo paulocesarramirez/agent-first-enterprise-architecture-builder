@@ -33,7 +33,6 @@ New content goes in the appropriate existing folder:
 | `docs/06-faq/` | frequently asked questions |
 | `examples/` | public-safe examples (see suffix rule) |
 | `examples/diagrams/` | Mermaid diagrams |
-| `starter-kits/` | public-safe starter scaffolds |
 | `assets/` | logos, visuals, diagrams |
 
 Do not create files outside this structure without discussion.

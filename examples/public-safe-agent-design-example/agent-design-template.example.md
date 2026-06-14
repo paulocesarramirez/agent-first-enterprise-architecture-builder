@@ -1,43 +1,47 @@
 # Agent Design Template — Example
 
-> **This is a public-safe illustrative example.** It shows a completed version of the agent design template using fictional context. Use [`docs/03-agent-design-patterns/public-agent-template.md`](../../docs/03-agent-design-patterns/public-agent-template.md) as your starting point.
+> **This is a public-safe illustrative example.** It shows a completed version of the canonical agent template using fictional context. It follows the same section structure as [`docs/03-agent-design-patterns/public-agent-template.md`](../../docs/03-agent-design-patterns/public-agent-template.md), which you should use as your blank starting point.
 
 ---
 
 ## Agent Contract — Completed Example
 
-### 1. Identity
+### 1. Agent identity
 
 | Field | Value |
 |-------|-------|
-| **Agent Name** | Client Meeting Summarizer |
+| **Agent name** | Client Meeting Summarizer |
 | **Identifier** | `agent-client-meeting-summarizer` |
+| **Agent type** | Structured workflow agent |
+| **Status** | Reference design (public-safe) |
 | **Version** | 1.0 |
 | **Owner** | Client Operations Lead, [DemoOrg] |
 
-### 2. Purpose
+---
 
-- **Primary purpose:** Generate structured meeting summaries from client meeting transcripts, capturing decisions, actions, and key discussion points.
-- **Problem it solves:** Meeting notes are inconsistent, incomplete, and time-consuming to write. This agent standardizes the process and reduces the time from meeting to summary to under 10 minutes.
-- **Success definition:** Summaries are accurate, complete, and require only light editing by the Engagement Lead. Time to distribute meeting notes drops from 60 minutes to under 15 minutes.
+### 2. Agent purpose
 
-### 3. Scope
+- **Core purpose:** Generate structured meeting summaries from client meeting transcripts, capturing decisions, actions, and key discussion points.
+- **Problem it solves:** Meeting notes are inconsistent, incomplete, and time-consuming to write. This agent standardizes the process and reduces the time from meeting to summary.
+- **Success definition:** Summaries are accurate, complete, and require only light editing by the Engagement Lead before distribution.
 
-**In scope:**
+The purpose is narrow and singular: it summarizes, it does not advise.
 
-- Generating structured meeting summaries from transcripts or recorded notes
-- Extracting action items with owners and due dates
-- Identifying decisions made during the meeting
-- Formatting output using the standard [DemoOrg] meeting notes template
+---
 
-**Out of scope:**
+### 3. Human value
 
-- Interpreting or analyzing the strategic implications of meeting content
-- Generating follow-up communications (handled by a separate agent)
-- Accessing any data source other than the provided transcript
-- Making judgments about the quality of decisions made in the meeting
+This agent reduces the repetitive cognitive friction of writing meeting notes so that humans can spend their time on judgment, not transcription.
 
-### 4. Knowledge Sources
+- It drafts; the Engagement Lead approves.
+- It standardizes preparation; the human owns the relationship and the decisions.
+- It accelerates routine documentation; it never replaces human accountability for client outcomes.
+
+The human role remains explicit at every step: **the agent proposes a draft, a human decides what is distributed.**
+
+---
+
+### 4. Source of truth
 
 | Source | Type | Owner | Update Frequency |
 |--------|------|-------|-----------------|
@@ -45,37 +49,72 @@
 | Action item format guidelines | Document | Client Operations | Quarterly |
 | Escalation indicators list | Policy | Engagement Standards | Quarterly |
 
-### 5. Inputs
+Rule: the agent must rely only on these governing documents and the provided transcript. It must not rely on undocumented parallel knowledge.
 
-- **Trigger type:** Manual — triggered by Engagement Lead after each client meeting
-- **Input format:** Meeting transcript (text) or structured notes (Markdown)
-- **Required context:** Client name, meeting type, meeting date, attendees list
+---
 
-### 6. Outputs
+### 5. Responsibility model
 
-- **Output format:** Structured Markdown document using meeting notes template
-- **Output destination:** Client folder in SharePoint (draft status)
-- **Quality standard:** All agenda items addressed; all action items include owner and due date; no fabricated details
+> The agent is responsible for **producing a structured draft summary from a single meeting transcript.**
+> The agent is **not** responsible for:
+>
+> - interpreting or analyzing the strategic implications of meeting content
+> - generating follow-up communications (handled by a separate agent)
+> - accessing any data source other than the provided transcript
+> - making judgments about the quality of decisions made in the meeting
 
-### 7. Escalation Rules
+---
 
-The agent must escalate when:
+### 6. Inputs
 
-- The transcript is ambiguous about who said what or what was decided
-- An action item has no clear owner
-- The meeting contains content that may have legal or compliance implications
-- The transcript contains client data that appears sensitive
+- **Trigger type:** Manual — triggered by the Engagement Lead after each client meeting.
+- **Input format:** Meeting transcript (text) or structured notes (Markdown).
+- **Required context:** Client name, meeting type, meeting date, attendees list.
 
-### 8. Constraints
+Do not include private production inputs in this public example.
+
+---
+
+### 7. Outputs
+
+- **Output format:** Structured Markdown document using the standard meeting notes template.
+- **Output destination:** Client folder in SharePoint (draft status).
+- **Quality standard:** All agenda items addressed; all action items include owner and due date; no fabricated details.
+
+Every output is explainable and auditable.
+
+---
+
+### 8. Boundaries and prohibitions
 
 The agent must never:
 
-- Add details not present in the transcript (no fabrication)
-- Interpret or editorialize about meeting content
-- Distribute the summary directly to clients
-- Retain transcript content beyond the summarization task
+- add details not present in the transcript (no fabrication)
+- interpret or editorialize about meeting content
+- distribute the summary directly to clients
+- retain transcript content beyond the summarization task
+- present its draft as a final, approved record
 
-### 9. Governance
+These boundaries are explicit, not implied.
+
+---
+
+### 9. Human oversight
+
+Human judgment is required where risk is non-trivial. The agent must escalate to a human when:
+
+- the transcript is ambiguous about who said what or what was decided
+- an action item has no clear owner
+- the meeting contains content that may have legal or compliance implications
+- the transcript contains client data that appears sensitive
+
+In all cases, the Engagement Lead reviews and edits the draft before distribution.
+
+> AI proposes. Humans decide.
+
+---
+
+### 10. Auditability
 
 | Field | Value |
 |-------|-------|
@@ -85,6 +124,18 @@ The agent must never:
 | **Human override mechanism** | Engagement Lead reviews and edits before distribution |
 | **Suspension procedure** | Client Operations disables the manual trigger |
 
-### 10. Prompt Summary
+Every significant output is traceable to the meeting notes template and the provided transcript.
+
+---
+
+### 11. Evolution model
+
+- Changes to scope, sources, or boundaries require explicit review by Client Operations.
+- Modifications are documented before behavior changes.
+- Architecture and template updates precede any change to agent behavior — the agent evolves through governance, not hidden drift.
+
+---
+
+### Prompt summary
 
 > This agent processes client meeting transcripts and generates structured meeting notes using the standard [DemoOrg] template. It extracts decisions, action items (with owners and due dates), and key discussion points. It does not interpret strategic content, fabricate details, or communicate directly with clients. All summaries are delivered to SharePoint as drafts for Engagement Lead review.

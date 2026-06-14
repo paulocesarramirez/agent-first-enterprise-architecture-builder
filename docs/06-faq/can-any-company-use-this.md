@@ -65,4 +65,4 @@ The fastest way to start is the **guided implementation**: tell Copilot or GitHu
 1. Run the [implementation diagnostic](../05-copilot-implementation/implementation-diagnostic.md) to determine your Microsoft stack and preferred build style (**No-Code** = Declarative agents, **Low-Code** = Copilot Studio, **Pro-Code** = Azure AI Foundry + Microsoft Agent Framework, or **Hybrid**).
 2. Walk you through the [implementation playbook](../05-copilot-implementation/implementation-playbook.md), step by step, using this repo as the source of truth.
 
-See [repo-implementation-guidelines.md](../05-copilot-implementation/repo-implementation-guidelines.md) for the full entry point, or browse the [starter kits](../../starter-kits/) for entry points appropriate to different organizational contexts.
+See [repo-implementation-guidelines.md](../05-copilot-implementation/repo-implementation-guidelines.md) for the full entry point.

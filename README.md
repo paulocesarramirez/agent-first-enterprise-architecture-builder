@@ -260,7 +260,6 @@ This repository is intended to include:
 - reusable design principles
 - agent design patterns
 - public-safe examples
-- starter kits
 - implementation guidance for GitHub Copilot
 
 It is intended to help others understand and reproduce the approach without requiring access to the private operational system used in the demo.

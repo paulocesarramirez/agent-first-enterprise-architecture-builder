@@ -49,7 +49,7 @@ This is the governing constraint for everything generated — files, docs, code 
 Copilot may generate:
 - markdown documentation, diagrams, and example templates
 - placeholder config files and public-safe code scaffolds
-- starter kits, generic agent design patterns, and file/folder structures
+- generic agent design patterns and file/folder structures
 
 Do **not** generate executable code for production deployment.
 

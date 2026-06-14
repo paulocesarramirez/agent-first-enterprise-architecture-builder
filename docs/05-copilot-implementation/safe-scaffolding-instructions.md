@@ -49,7 +49,6 @@ Full rationale: [../04-demo/what-is-public-vs-private.md](../04-demo/what-is-pub
 | New documentation | the matching `docs/0X-` folder | one concept per file |
 | New example | `examples/` | filename ends in `.example.md` |
 | New diagram | `examples/diagrams/` | Mermaid `.mmd` |
-| New starter kit | `starter-kits/` | public-safe scaffolds only |
 | Visual assets | `assets/` (or `docs/04-demo/Screenshots/` for demo images) | review every image first |
 
 Follow [naming-conventions.md](naming-conventions.md) for names. Do **not** create files outside the defined structure without discussion. Do **not** modify `docs/01-principles/` without explicit instruction — those are foundational.
@@ -61,7 +60,7 @@ Follow [naming-conventions.md](naming-conventions.md) for names. Do **not** crea
 **Copilot may generate:**
 - markdown documentation, diagrams, and example templates
 - placeholder config files and public-safe code scaffolds
-- starter kits, generic agent design patterns, and folder structures
+- generic agent design patterns and folder structures
 
 **Copilot must not generate:**
 - executable code for production deployment

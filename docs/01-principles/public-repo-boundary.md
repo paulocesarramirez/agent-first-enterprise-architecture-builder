@@ -44,7 +44,6 @@ The **public layer** may include:
 - human-centered design principles
 - reusable design patterns
 - public-safe examples
-- starter kits
 - templates
 - placeholder agent designs
 - public-safe diagrams
@@ -113,7 +112,7 @@ This applies especially to:
 - prompt structures
 - workflow templates
 - architecture diagrams
-- implementation starter kits
+- implementation guidance
 
 ---
 
