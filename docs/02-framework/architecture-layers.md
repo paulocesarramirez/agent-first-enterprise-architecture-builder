@@ -1,99 +1,212 @@
 # Architecture Layers
 
-## Overview
+## Purpose
 
-The Agent-First Enterprise Architecture is organized into four interdependent layers. Each layer has a distinct purpose, and each depends on the layer below it functioning correctly.
+This document explains the main architectural layers of the
+**Agent-First Enterprise Architecture Builder** framework.
 
-```
-┌─────────────────────────────────────────┐
-│         EXECUTION LAYER (Layer 4)        │
-│   Actions in connected enterprise systems│
-├─────────────────────────────────────────┤
-│        GENERATION LAYER (Layer 3)        │
-│   AI-assisted reasoning and content      │
-├─────────────────────────────────────────┤
-│    AGENT GOVERNANCE LAYER (Layer 2)      │
-│   Rules, boundaries, and oversight       │
-├─────────────────────────────────────────┤
-│       KNOWLEDGE LAYER (Layer 1)          │
-│   Structured organizational knowledge    │
-└─────────────────────────────────────────┘
-```
+The purpose of these layers is to help organizations design AI-native operating models in the correct order:
 
-## Layer 1: Knowledge Layer
+1. architecture first  
+2. governance second  
+3. capability generation third  
+4. execution fourth  
 
-**Purpose:** Provide agents with an authoritative, maintained foundation of organizational knowledge.
-
-**Contains:**
-- Organizational principles and values
-- Business rules and decision criteria
-- Process documentation
-- Domain-specific knowledge (products, clients, markets)
-- Contextual metadata (current priorities, constraints)
-
-**Key Requirement:** Knowledge must be structured, maintained, and explicitly made available to agents. Model memory is not a substitute.
-
-**See:** [`knowledge-architecture.md`](knowledge-architecture.md)
+This document is public-safe and intended for learning, adaptation, and implementation guidance.
 
 ---
 
-## Layer 2: Agent Governance Layer
+## Why layers matter
 
-**Purpose:** Define what agents are permitted to do, how they must behave, and who is accountable for their actions.
+Many enterprise initiatives fail because architecture, workflows, automation, and tooling are mixed together too early.
 
-**Contains:**
-- Agent authorization and scope definitions
-- Escalation rules and override mechanisms
-- Audit and review processes
-- Compliance and safety constraints
+This framework separates layers so that:
 
-**Key Requirement:** Every deployed agent must have an owner and a documented scope. Ungoverned agents should not exist in production.
+- strategic intent remains clear
+- the source of truth stays stable
+- agent behavior remains governed
+- execution can evolve without breaking coherence
 
-**See:** [`agent-governance-layer.md`](agent-governance-layer.md)
-
----
-
-## Layer 3: Generation Layer
-
-**Purpose:** Enable AI models to reason, draft, summarize, and generate outputs that serve organizational goals.
-
-**Contains:**
-- Prompt architecture and templates
-- Model selection and configuration
-- Output evaluation criteria
-- Feedback mechanisms
-
-**Key Requirement:** Generation must be grounded in Layer 1 (knowledge) and constrained by Layer 2 (governance). Unconstrained generation creates risk.
-
-**See:** [`generation-layer.md`](generation-layer.md)
+The architecture is the foundation.
+Everything else should consume it.
 
 ---
 
-## Layer 4: Execution Layer
+## Layer 1 — Knowledge Architecture Layer
 
-**Purpose:** Enable agents to act within enterprise systems — sending messages, updating records, triggering workflows, and orchestrating processes.
+### Definition
+The Knowledge Architecture Layer is the **source of truth**.
 
-**Contains:**
-- Integration with Microsoft 365 and connected systems
-- Action definitions and permissions
-- Orchestration logic
-- Rollback and error handling
+It defines:
+- principles
+- rules
+- processes
+- semantic structures
+- decision boundaries
+- organizational logic
+- intended agent behavior
 
-**Key Requirement:** Execution without governance and knowledge grounding leads to unpredictable and potentially harmful outcomes.
+### Function
+This layer exists so that the organization can document **how it thinks, works, and governs itself** before implementing tools or automations.
 
-**See:** [`microsoft-execution-layer.md`](microsoft-execution-layer.md)
+### Characteristics
+This layer should be:
+- explicit
+- structured
+- reusable
+- transversal
+- understandable by humans and AI
+
+### Outputs of this layer
+Examples include:
+- operating guides
+- architecture documents
+- agent principles
+- conventions
+- approved templates
+- governance rules
 
 ---
 
-## Layer Dependencies
+## Layer 2 — Agent Governance Layer
 
-The layers are not independent. A failure at any lower layer degrades the layers above it:
+### Definition
+The Agent Governance Layer defines how agents are allowed to operate.
 
-- Poor knowledge → Poor governance → Unreliable generation → Unsafe execution
-- Strong knowledge → Clear governance → Reliable generation → Safe execution
+It ensures that agents:
+- read from the source of truth
+- remain bounded by declared responsibilities
+- are auditable
+- do not bypass human judgment
+- do not evolve through hidden drift
 
-This is why the framework prioritizes **knowledge architecture first**.
+### Function
+This layer protects the organization from uncontrolled or incoherent agent behavior.
 
-## Visual Reference
+### Typical governance concerns
+- role clarity
+- scope limitations
+- human approval requirements
+- traceability of outputs
+- alignment with principles
+- change control
 
-See [`examples/diagrams/architecture-layers.mmd`](../../examples/diagrams/architecture-layers.mmd) for the Mermaid diagram of this model.
+### Core rule
+> AI accelerates, structures, and proposes.  
+> Humans decide.
+
+---
+
+## Layer 3 — Capability Generation Layer
+
+### Definition
+The Capability Generation Layer is where architecture begins to become operational.
+
+This layer translates architecture into:
+- workflows
+- role patterns
+- agent responsibilities
+- collaboration structures
+- implementation blueprints
+- execution models
+
+### Function
+This layer allows the organization to move from abstract architecture to usable capability.
+
+### Important distinction
+This layer does not replace architecture.
+
+It depends on architecture.
+
+If the architecture changes, generated capabilities can evolve in a governed way.
+
+---
+
+## Layer 4 — Execution Layer
+
+### Definition
+The Execution Layer is the environment where the framework is implemented through real tools and platforms.
+
+In this framework, that may include:
+- SharePoint
+- Teams
+- Planner
+- Outlook
+- Microsoft 365 Copilot
+- other governed execution environments
+
+### Function
+This layer is where users, agents, workflows, and knowledge interact in practice.
+
+### Key principle
+The tools do not define the organization.
+
+The architecture defines how the tools should be used.
+
+---
+
+## Relationship between layers
+
+The layers should be understood as directional:
+
+**Knowledge Architecture**  
+→ **Agent Governance**  
+→ **Capability Generation**  
+→ **Execution**
+
+This order matters.
+
+If an organization starts directly in tooling or execution without architecture, it risks producing:
+- fragmented logic
+- duplicated decisions
+- brittle implementation
+- weak governance
+
+---
+
+## Human-centered interpretation
+
+This layered model protects a human-centered enterprise design.
+
+Why?
+
+Because it keeps:
+- purpose above tooling
+- principles above convenience
+- governance above improvisation
+- human judgment above uncontrolled automation
+
+That is the meaning of:
+
+**Agent-First Infrastructure, Human-First Purpose**
+
+---
+
+## Public vs private application
+
+This repository shares the public version of the layered model.
+
+A private implementation may include:
+- confidential business logic
+- internal prompts
+- private execution patterns
+- sensitive operational knowledge
+
+Those private details should not appear in the public repo.
+
+The public repo should share the framework, not expose the operational core.
+
+---
+
+## Final summary
+
+The four layers are:
+
+1. **Knowledge Architecture Layer** → defines truth  
+2. **Agent Governance Layer** → protects coherence  
+3. **Capability Generation Layer** → enables operational design  
+4. **Execution Layer** → runs the system in practice  
+
+Architecture comes first.
+
+Execution comes last.

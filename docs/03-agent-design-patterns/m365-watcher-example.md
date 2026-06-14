@@ -1,91 +1,180 @@
-# M365 Watcher Agent — Example
+# M365 Watcher — Public-Safe Example
 
-> This is an illustrative example using fictional context. It demonstrates how to apply the common agent contract to a Microsoft 365 activity monitoring use case.
+## Purpose
+
+This document is a **public-safe example** of how a technology monitoring agent can be described under the
+**Agent-First Enterprise Architecture Builder** framework.
+
+It is a reference pattern only.
+
+It is not a production export and does not expose private operational implementation details.
 
 ---
 
-## Agent Contract
+## 1. Agent Name
 
-### 1. Identity
+**M365 Watcher**
 
-| Field | Value |
-|-------|-------|
-| **Agent Name** | M365 Activity Watcher |
-| **Identifier** | `agent-m365-activity-watcher` |
-| **Version** | 1.0 |
-| **Owner** | [IT Operations Lead, fictional] |
+---
 
-### 2. Purpose
+## 2. Purpose of this Agent
 
-- **Primary purpose:** Monitor Microsoft 365 activity signals and surface anomalies, collaboration gaps, or engagement patterns relevant to IT operations and team health.
-- **Problem it solves:** IT and operations teams lack a structured view of how M365 tools are being used, leading to underutilization, missed signals, and reactive troubleshooting.
-- **Success definition:** Weekly digest accurately reflects usage patterns; anomalies are surfaced within 24 hours; no false positives that require manual investigation.
+This agent exists to monitor relevant changes in the Microsoft 365 ecosystem and produce structured input for architectural review.
 
-### 3. Scope
+Its purpose is to support controlled evolution, not automatic change.
 
-**In scope:**
+---
 
-- Monitoring Teams activity (channels, meetings, messages) at an aggregate level
-- Monitoring SharePoint/OneDrive storage and sharing patterns
-- Flagging accounts with anomalous activity patterns
-- Generating a weekly operations digest
+## 3. Single Responsibility
 
-**Out of scope:**
+The agent is responsible for:
 
-- Reading the content of messages or documents
-- Monitoring individual employee productivity
-- Taking action on flagged accounts (alerting only)
-- Accessing data outside the organization's M365 tenant
+- monitoring platform evolution and producing institutional review input
 
-### 4. Knowledge Sources
+The agent is not responsible for:
 
-| Source | Type | Owner | Update Frequency |
-|--------|------|-------|-----------------|
-| M365 usage reports (aggregate) | Data | IT Operations | Daily |
-| Anomaly thresholds definition | Policy | IT Security | Quarterly |
-| Known scheduled events (e.g., onboarding cohorts) | Document | HR Operations | As needed |
-| Escalation contacts | Document | IT Lead | Quarterly |
+- modifying the system autonomously
+- changing guides directly
+- applying architecture updates without human approval
+- redefining governance on its own
 
-### 5. Inputs
+---
 
-- **Trigger type:** Scheduled daily, with a weekly digest on Fridays
-- **Input format:** Aggregate usage data from Microsoft Graph reporting APIs
-- **Required context:** Anomaly thresholds, current known events (to prevent false positives)
+## 4. Human Value
 
-### 6. Outputs
+This agent creates value by:
 
-- **Output format:** Structured digest (Markdown) + anomaly alerts (when triggered)
-- **Output destination:** IT Operations shared channel in Teams
-- **Quality standard:** No content-level data exposed; only aggregate and anonymized patterns
+- reducing the effort required to track platform changes
+- helping leaders review changes in a structured way
+- improving visibility into external technological evolution
+- protecting the organization from reactive or chaotic adoption
 
-### 7. Escalation Rules
+This agent supports human discernment over change.
 
-The agent must escalate when:
+---
 
-- An account shows activity patterns matching a defined security concern threshold
-- Storage usage exceeds defined limits in a short time window
-- A data sharing event matches criteria for potential data exfiltration (alert only, no action)
-- The agent cannot access its required data sources
+## 5. Position in the Architecture
 
-### 8. Constraints
+This agent sits near the governance and evolution boundary of the architecture.
 
-The agent must never:
+It does not own change.
 
-- Access, read, or summarize the content of any message, document, or email
-- Identify specific individuals in outputs (use role/department aggregation only)
-- Take any action on user accounts
-- Share outputs outside the IT Operations channel without explicit authorization
+It produces monitored input that humans use to decide:
+- update
+- observe
+- ignore
+- defer
 
-### 9. Governance
+---
 
-| Field | Value |
-|-------|-------|
-| **Authorization date** | [Date of authorization] |
-| **Review schedule** | Quarterly — including privacy and compliance review |
-| **Audit log required?** | Yes — all data queries and outputs logged |
-| **Human override mechanism** | IT Lead can disable the agent via the operations dashboard |
-| **Suspension procedure** | Disable scheduled trigger; notify IT Lead and Security |
+## 6. Governing Sources
 
-### 10. Prompt Summary
+Typical sources may include:
 
-> This agent monitors aggregate Microsoft 365 activity data to support IT operations. It surfaces usage patterns, flags anomalies against defined thresholds, and generates a weekly digest. It operates strictly on aggregate, non-content data and never identifies individuals. All alerts are advisory — no actions are taken autonomously. The agent is designed for transparency and privacy compliance.
+- platform announcements
+- product release notes
+- approved monitoring criteria
+- architecture principles
+- governance guides
+- official technology references
+
+This agent should remain grounded in declared monitoring scope.
+
+---
+
+## 7. Inputs
+
+Typical inputs may include:
+
+- update feeds
+- release documentation
+- governance criteria
+- monitoring schedules
+- review prompts
+- official ecosystem references
+
+---
+
+## 8. Outputs
+
+Typical outputs may include:
+
+- structured monitoring reports
+- categorized change observations
+- potential impact summaries
+- recommendations for human review
+
+Outputs should support decision-making, not automate it.
+
+---
+
+## 9. Boundaries
+
+The agent must not:
+
+- modify the architecture directly
+- update guides autonomously
+- override architecture owners
+- classify change outside declared criteria
+- act as if monitored change equals approved change
+
+---
+
+## 10. Autonomy Level
+
+**Medium**
+
+This agent may monitor, summarize, classify, and report.
+
+This agent may not implement structural change without explicit human approval.
+
+---
+
+## 11. Human Oversight
+
+Human review is required for:
+
+- deciding whether a change matters
+- deciding whether architecture should evolve
+- approving guide modifications
+- authorizing downstream agent or process changes
+
+Principle:
+> Monitoring can be automated. Governance cannot be abdicated.
+
+---
+
+## 12. Auditability
+
+All major outputs should be traceable to:
+
+- monitored references
+- declared criteria
+- approved architecture principles
+- explicit change review categories
+
+---
+
+## 13. Interaction with Other Agents
+
+This agent may:
+
+- provide structured monitoring output to governance owners
+- provide signals to other bounded agents after approval
+- participate in a controlled review cycle
+
+It must not trigger uncontrolled architecture drift.
+
+---
+
+## 14. Evolution Rule
+
+This agent evolves through the same governance rules it helps inform.
+
+Changes to:
+- criteria
+- output format
+- scope
+- interpretation patterns
+
+should be documented and reviewed.

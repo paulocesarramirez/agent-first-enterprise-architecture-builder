@@ -30,6 +30,34 @@ The human-first principle creates a forcing function: **every agent must be just
 | Transparency | Agents must be able to explain their actions to a human reviewer |
 | Override | Humans can always override, suspend, or redirect an agent |
 
+## The Human–AI Co-Creation Loop
+
+Human-first does not mean human-alone. The strongest pattern is not *human vs. AI*, but **human + AI in deliberate co-creation**. Agents are designed to operate inside a repeating loop that keeps human judgment in the critical path:
+
+1. **The human defines** purpose, direction, and criteria.
+2. **The agent accelerates** execution and generates options, structure, and ideas.
+3. **The human evaluates**, refines, and decides with judgment.
+4. **The loop repeats** until the outcome is genuinely better than either could produce alone.
+
+This loop is intentional: it keeps people continuously exercising critical thinking, synthesis, creativity, and decision-making, rather than delegating those capacities away.
+
+## Reduce Friction, Not the Human
+
+A core design rule follows from the human-first principle:
+
+> **AI should reduce friction — not reduce the human.**
+
+This distinguishes two very different futures for automation:
+
+| Harmful Automation | Healthy Automation |
+|--------------------|--------------------|
+| Minimizes human intervention | Removes friction and repetition |
+| Centralizes everything in the machine | Accelerates execution |
+| Reduces the human to a passive role | Strengthens the human in what is essential |
+| Disconnects people from deep thinking | Frees time to think, design, decide, lead, and create |
+
+The goal of automating routine work is to return human time and attention to higher-value judgment — not to remove people from the activities that keep their thinking sharp. Infrastructure can be highly agentic; **meaning, purpose, and direction remain human**.
+
 ## What This Principle Does Not Mean
 
 - It does not mean agents are passive or require constant supervision
@@ -40,7 +68,7 @@ It means the **design intent** is always traceable back to human purpose, and th
 
 ## Complementary Reading — The Human Side
 
-These articles expand the **human-first** foundation of this framework, framing human–AI co-creation as a way to keep human judgment central and minds sharp rather than diminished. They are complementary perspectives, not normative parts of the principle itself.
+The co-creation loop and the "reduce friction, not the human" rule above draw directly on the following articles, which expand the **human-first** foundation of this framework — framing human–AI co-creation as a way to keep human judgment central and minds sharp rather than diminished.
 
 - **English** — [Human–AI Co-Creation: The Smartest Way to Stay Mentally Sharp](https://www.linkedin.com/pulse/human-ai-co-creation-smartest-way-stay-mentally-sharp-ram%C3%ADrez-silva-e5nme)
 - **Spanish** — [Co-creación humana–IA](https://www.emprendhec.com/post/co-creacion-humana-ia)

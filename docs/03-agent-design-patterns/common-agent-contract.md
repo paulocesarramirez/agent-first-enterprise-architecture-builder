@@ -1,104 +1,218 @@
 # Common Agent Contract
 
-## Overview
+## Purpose
 
-Every agent in this framework must be designed against a common contract. This contract defines the minimum required elements of any agent's specification. It ensures agents are governable, explainable, and consistently designed.
+This document defines the common contract that every agent designed under the
+**Agent-First Enterprise Architecture Builder** framework should follow.
 
-The contract is not a prompt template — it is a **design specification**. The prompt is one output of completing the contract.
+This is a public-safe reference contract.
 
----
-
-## The Agent Contract
-
-### 1. Identity
-
-| Field | Description |
-|-------|-------------|
-| **Agent Name** | A clear, descriptive name (e.g., `Project Status Summarizer`) |
-| **Identifier** | A stable, unique slug (e.g., `agent-project-status-summary`) |
-| **Version** | Semantic version of the agent design (e.g., `1.0`) |
-| **Owner** | Name and role of the human responsible for this agent |
-
-### 2. Purpose
-
-- **Primary purpose:** One sentence describing what this agent does and for whom
-- **Problem it solves:** What human task or gap does this agent address?
-- **Success definition:** How will we know the agent is performing well?
-
-### 3. Scope
-
-**In scope** (explicit list of what the agent does):
-
-- ...
-- ...
-
-**Out of scope** (explicit list of what the agent does NOT do):
-
-- ...
-- ...
-
-### 4. Knowledge Sources
-
-List the specific knowledge sources this agent is designed to consult:
-
-| Source | Type | Owner | Update Frequency |
-|--------|------|-------|-----------------|
-| [Source name] | Document / Policy / Data | [Owner name] | [Weekly / Monthly / On change] |
-
-### 5. Inputs
-
-What does the agent receive as input?
-
-- Trigger type: (manual prompt / scheduled / event-driven)
-- Input format: (free text / structured data / system event)
-- Required context: (what must be present for the agent to operate)
-
-### 6. Outputs
-
-What does the agent produce?
-
-- Output format: (prose / structured markdown / JSON / action)
-- Output destination: (human review / connected system / email / file)
-- Quality standard: (how will outputs be evaluated?)
-
-### 7. Escalation Rules
-
-Under what conditions must the agent escalate to a human?
-
-- [ ] Ambiguity in the knowledge base
-- [ ] Request outside defined scope
-- [ ] Confidence below threshold
-- [ ] High-stakes or irreversible action
-- [ ] Novel situation not covered by existing rules
-- Other: ___
-
-### 8. Constraints
-
-What must the agent never do?
-
-- ...
-- ...
-
-### 9. Governance
-
-| Field | Value |
-|-------|-------|
-| **Authorization date** | |
-| **Review schedule** | |
-| **Audit log required?** | Yes / No |
-| **Human override mechanism** | |
-| **Suspension procedure** | |
-
-### 10. Prompt Summary
-
-A brief summary of the core instructions given to the agent (not the full prompt — see implementation files for that):
-
-> _[2–4 sentence description of what the agent is instructed to do and how]_
+It is intended to help architects, contributors, and GitHub Copilot maintain coherence across all public-safe agent design examples in this repository.
 
 ---
 
-## Notes
+## Why a common contract exists
 
-- This contract must be completed before an agent is deployed
-- Changes to scope, knowledge sources, or constraints require a contract revision
-- The contract is owned by the agent owner and reviewed on the governance schedule
+An agent ecosystem should not grow through improvisation.
+
+Without a common contract, organizations tend to accumulate:
+- overlapping responsibilities
+- hidden assumptions
+- duplicated logic
+- unclear authority boundaries
+- weak governance
+
+A common contract ensures that agents remain:
+- coherent
+- legible
+- auditable
+- scalable
+- aligned with architecture
+
+---
+
+## Contract Principle 1 — Architecture First
+
+Every agent must be designed as a consumer of the architecture.
+
+Agents do not define truth.
+Agents read and apply truth.
+
+That means:
+- the architecture precedes the agent
+- the architecture constrains the agent
+- the architecture explains the agent
+
+---
+
+## Contract Principle 2 — Single Responsibility
+
+Every agent must have one clearly declared responsibility.
+
+The responsibility must be:
+- narrow enough to be understood
+- important enough to justify the role
+- explicit enough to prevent overlap
+
+Good pattern:
+> one role, one responsibility, clear exclusions
+
+Bad pattern:
+> a vague assistant expected to do everything
+
+---
+
+## Contract Principle 3 — Human Judgment Remains Central
+
+Agents may:
+- structure
+- accelerate
+- classify
+- summarize
+- propose
+
+Agents may not replace human judgment in strategic or sensitive decisions.
+
+Each agent design must explicitly state:
+- where human approval is required
+- which outputs are only drafts or recommendations
+- which actions are out of scope without human review
+
+---
+
+## Contract Principle 4 — Source of Truth Only
+
+Agents must only operate from declared sources of truth.
+
+They must not rely on:
+- undocumented tribal knowledge
+- hidden memory not approved by architecture
+- parallel knowledge stores outside governance
+- improvised rules not documented in the system
+
+Every agent design should state what governs it.
+
+---
+
+## Contract Principle 5 — Transparency and Auditability
+
+Agent behavior must be explainable.
+
+Each important output should be traceable to:
+- a guide
+- a principle
+- a rule
+- a template
+- an approved reference
+
+If an agent cannot justify an output from a declared source, the output should be treated as ungrounded.
+
+---
+
+## Contract Principle 6 — Bounded Autonomy
+
+Agents may be autonomous inside declared boundaries.
+
+Those boundaries must be explicit.
+
+Each agent should define:
+- what it can do
+- what it can recommend
+- what it must not do
+- when it must defer
+- what requires escalation or approval
+
+Bounded autonomy is strength.
+Unbounded autonomy is risk.
+
+---
+
+## Contract Principle 7 — Controlled Evolution
+
+Agents should not evolve silently.
+
+Changes to agent design should be:
+- deliberate
+- documented
+- reviewed
+- aligned with architecture updates
+
+If architecture changes, agent behavior may change.
+If architecture does not change, agent drift should be treated as a governance problem.
+
+---
+
+## Contract Principle 8 — Reduction of Friction with Purpose
+
+Agents exist to reduce friction in meaningful work.
+
+They should:
+- save time
+- improve consistency
+- support clarity
+- free humans for higher-value thinking
+
+They should not:
+- create noise
+- create dependency without value
+- overcomplicate interaction
+- obscure responsibility
+
+---
+
+## Minimum contract fields for every public-safe agent design
+
+Every public-safe agent design in this repository should declare:
+
+1. **Agent Name**
+2. **Purpose**
+3. **Human Value**
+4. **Single Responsibility**
+5. **Source of Truth**
+6. **Inputs**
+7. **Outputs**
+8. **Hard Boundaries**
+9. **Human Oversight**
+10. **Auditability Rule**
+11. **Evolution Rule**
+
+---
+
+## Example statement
+
+A public-safe example agent contract should resemble this pattern:
+
+- This agent exists for one clearly bounded responsibility.
+- This agent reads only approved architecture and declared guides.
+- This agent produces explainable outputs.
+- This agent does not bypass human judgment.
+- This agent remains inside explicit governance boundaries.
+
+---
+
+## Relationship to examples
+
+This contract should govern all public-safe example agents in this repository, including:
+
+- PM Assistant example
+- M365 Watcher example
+- Commercial Agent example
+- Editorial Assistant example
+- Accountant Agent placeholder
+- Legal Agent placeholder
+
+These are examples and placeholders only.
+They are not direct exports of the private implementation.
+
+---
+
+## Final principle
+
+A strong agent ecosystem is not built by adding more agents.
+
+It is built by ensuring that every agent is:
+- grounded
+- governed
+- explainable
+- bounded
+- human-aligned

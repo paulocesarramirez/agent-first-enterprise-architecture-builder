@@ -1,92 +1,181 @@
-# Editorial Agent — Example
+# Editorial Assistant — Public-Safe Example
 
-> This is an illustrative example using fictional context. It demonstrates how to apply the common agent contract to a content review and editorial use case.
+## Purpose
+
+This document is a **public-safe example** of how an editorial production agent can be described under the
+**Agent-First Enterprise Architecture Builder** framework.
+
+It is a reference pattern only.
+
+It is not a production export and does not expose private editorial operating details.
 
 ---
 
-## Agent Contract
+## 1. Agent Name
 
-### 1. Identity
+**Editorial Assistant**
 
-| Field | Value |
-|-------|-------|
-| **Agent Name** | Editorial Review Assistant |
-| **Identifier** | `agent-editorial-review` |
-| **Version** | 1.0 |
-| **Owner** | [Head of Content, fictional] |
+---
 
-### 2. Purpose
+## 2. Purpose of this Agent
 
-- **Primary purpose:** Review draft content for alignment with editorial standards, brand voice, and factual consistency before human editorial review.
-- **Problem it solves:** Editorial teams spend significant time on first-pass reviews of drafts that don't yet meet baseline standards. This agent handles the first-pass triage.
-- **Success definition:** Drafts flagged by the agent have measurably more issues than those approved; editor time on first-pass review is reduced by >40%.
+This agent exists to support editorial content production across declared channels in a brand-aligned and structured way.
 
-### 3. Scope
+Its purpose is to produce high-quality editorial drafts from approved input while keeping publication and final authority in human hands.
 
-**In scope:**
+---
 
-- Checking drafts against the editorial style guide
-- Flagging inconsistencies with the approved brand voice guidelines
-- Identifying factual claims that require verification
-- Checking for structural and formatting compliance
-- Producing an annotated review with specific, actionable feedback
+## 3. Single Responsibility
 
-**Out of scope:**
+The agent is responsible for:
 
-- Making final editorial decisions
-- Publishing or distributing content
-- Rewriting content without explicit instruction
-- Assessing strategic or business value of content
+- producing editorial content from an approved editorial brief and declared brand/quality references
 
-### 4. Knowledge Sources
+The agent is not responsible for:
 
-| Source | Type | Owner | Update Frequency |
-|--------|------|-------|-----------------|
-| Editorial style guide | Document | Head of Content | Quarterly |
-| Brand voice guidelines | Document | Brand Team | As updated |
-| Approved terminology list | Document | Content + Legal | Monthly |
-| Content type templates | Document | Content Team | Quarterly |
+- publishing content autonomously
+- operating outside approved brief boundaries
+- qualifying leads
+- acting outside editorial scope without explicit invocation
+- replacing editorial review
 
-### 5. Inputs
+---
 
-- **Trigger type:** Manual — triggered when a draft is submitted for review
-- **Input format:** Draft document (Markdown or Word)
-- **Required context:** Content type, target audience, publication channel
+## 4. Human Value
 
-### 6. Outputs
+This agent creates value by:
 
-- **Output format:** Annotated review document with flagged issues and suggested improvements
-- **Output destination:** Author and editor review queue
-- **Quality standard:** All style guide violations flagged; no false positives > 10%; feedback is specific and actionable
+- accelerating content production
+- improving consistency across channels
+- reducing blank-page friction
+- helping humans focus on strategy, selection, approval, and final refinement
 
-### 7. Escalation Rules
+---
 
-The agent must escalate when:
+## 5. Position in the Architecture
 
-- A draft contains claims that may have legal or compliance implications
-- The draft references topics outside the agent's knowledge base (e.g., new products not yet documented)
-- The draft is flagged for content policy concerns
-- The volume of issues exceeds a threshold suggesting the draft needs significant rework before review
+This agent sits inside the content-production part of the execution layer but remains governed by:
 
-### 8. Constraints
+- brand principles
+- editorial guides
+- approved brief structure
+- architecture rules
 
-The agent must never:
+It is a production agent, not a publication authority.
 
-- Approve content for publication
-- Rewrite substantial portions of a draft without being explicitly asked
-- Share drafts or reviews outside the designated review system
-- Apply editorial standards from a different content type than the one specified
+---
 
-### 9. Governance
+## 6. Governing Sources
 
-| Field | Value |
-|-------|-------|
-| **Authorization date** | [Date] |
-| **Review schedule** | Quarterly — including style guide alignment check |
-| **Audit log required?** | Yes — all reviews logged with version of style guide used |
-| **Human override mechanism** | Editor can accept or reject any agent flag |
-| **Suspension procedure** | Head of Content disables submission trigger |
+Typical sources may include:
 
-### 10. Prompt Summary
+- editorial brief structures
+- brand voice principles
+- content quality checklists
+- approved hook libraries
+- CTA guidance
+- channel definitions
+- architecture principles
 
-> This agent performs a first-pass editorial review of submitted draft content. It checks alignment with the style guide, brand voice, and approved terminology. It produces an annotated review with specific feedback for the author and editor. It does not make final decisions, rewrite content, or approve publication. It escalates when content raises legal, compliance, or policy concerns.
+---
+
+## 7. Inputs
+
+Typical inputs may include:
+
+- approved editorial brief
+- declared audience
+- channel targets
+- content objective
+- approved messaging references
+- public-safe structure definitions
+
+---
+
+## 8. Outputs
+
+Typical outputs may include:
+
+- draft posts
+- draft articles
+- hook options
+- CTA suggestions
+- structure variants
+- checklist-ready editorial output
+
+Outputs should remain subject to human review and publication control.
+
+---
+
+## 9. Boundaries
+
+The agent must not:
+
+- publish content autonomously
+- fabricate governance approval
+- operate as a sales qualification agent
+- bypass editorial review
+- work outside approved brief boundaries without explicit human instruction
+
+---
+
+## 10. Autonomy Level
+
+**Low-Medium**
+
+This agent may draft, suggest, structure, and self-check certain quality patterns.
+
+This agent may not publish or operate as final editorial authority.
+
+---
+
+## 11. Human Oversight
+
+Human review is required for:
+
+- final approval
+- channel publication
+- strategic messaging changes
+- sensitive brand decisions
+- exception handling outside the brief
+
+Principle:
+> The agent accelerates production. Humans own voice, timing, and publication.
+
+---
+
+## 12. Auditability
+
+Important outputs should be traceable to:
+
+- the editorial brief
+- approved brand rules
+- quality checklists
+- approved templates
+- declared editorial principles
+
+---
+
+## 13. Interaction with Other Agents
+
+This agent may:
+
+- receive approved brief input from other bounded processes
+- produce assets for human review
+- hand off structured content packages into governed publishing flows
+
+It must not assume ownership of lead qualification or operational execution outside editorial scope.
+
+---
+
+## 14. Evolution Rule
+
+Changes to:
+- editorial guidance
+- channel structure
+- quality rules
+- autonomy boundaries
+- checklist logic
+
+should be reviewed and documented explicitly.
+``

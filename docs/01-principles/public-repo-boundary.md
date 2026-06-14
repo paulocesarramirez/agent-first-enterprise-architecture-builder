@@ -1,55 +1,175 @@
 # Public Repo Boundary
 
-## Principle
+## Why this document exists
 
-> This repository is a public-safe representation of the framework. The boundary between what is shared and what is kept private is intentional and principled, not arbitrary.
+This repository is public.
 
-## The Dual Reality
+That creates an important architectural and governance requirement:
 
-This framework exists in two forms:
+The repository must share the **public architecture, framework, and reference patterns** of the project without exposing the private operational implementation used in the live EmprendHEC environment.
 
-| Form | Contents | Audience |
-|------|----------|----------|
-| **Public repo** (this repository) | Principles, patterns, generic examples, diagrams | Anyone |
-| **Private implementation** | Live agent configurations, business rules, internal knowledge, system integrations | Internal teams only |
+This document defines that boundary.
 
-The public repo is a **structural and conceptual representation**. The private implementation is the operational reality. Neither is complete without the other — but they serve different purposes.
+---
 
-## What Determines the Boundary
+## Core rule
 
-Content belongs in the public repo if it is:
+> **Publish the architecture. Keep the operations private.**
 
-- **Generalizable** — Useful to organizations beyond the one that created it
-- **Safe** — Free of proprietary data, credentials, or exploitable detail
-- **Principled** — Reflective of architectural thinking, not implementation specifics
-- **Illustrative** — Demonstrates a pattern rather than exposing a system
+This repository is intended to share:
+- the framework
+- the architecture
+- the mindset
+- the governance principles
+- the public reference patterns
+- the reusable scaffolding
 
-Content stays private if it:
+It is **not** intended to publish:
+- confidential operational logic
+- private execution details
+- client or customer data
+- sensitive internal prompts
+- private knowledge bases
+- production-ready internal business artifacts
 
-- Contains specific business logic or decision criteria
-- Names internal systems, vendors, or integrations
-- Could enable unauthorized access or misuse if public
-- Represents competitive advantage that should not be disclosed
+---
 
-## The Responsibility of Contribution
+## Public layer
 
-Contributors to this public repo must apply this boundary to every contribution. When in doubt, ask:
+The **public layer** may include:
 
-> "If a competitor read this, would it harm the organization?"
+- architecture definitions
+- governance principles
+- source-of-truth concepts
+- human-centered design principles
+- reusable design patterns
+- public-safe examples
+- starter kits
+- templates
+- placeholder agent designs
+- public-safe diagrams
+- generic documentation structures
 
-If yes, it does not belong in the public repo.
+This is the layer intended for learning, adoption, adaptation, and open discussion.
 
-## Why This Boundary Matters for the Framework
+---
 
-An architectural framework that leaks operational details loses value in two directions:
+## Private layer
 
-1. **Security risk** — Exposed configurations can be exploited
-2. **Generalizability loss** — Overly specific examples are less useful to others
+The **private layer** includes material that must remain outside this repository.
 
-The boundary preserves both the security of private systems and the utility of the public framework.
+Examples include:
 
-## Related Documents
+- internal prompts used by the working EmprendHEC system
+- internal execution rules tied to real business operations
+- operational report formats
+- live knowledge-base content
+- customer or client content
+- credentials, secrets, tokens, or private endpoints
+- private process details not approved for public release
+- screenshots or exports containing sensitive business data
 
-- [`docs/00-overview/public-demo-scope.md`](../00-overview/public-demo-scope.md) — What is and isn't in this repo
-- [`docs/04-demo/what-is-public-vs-private.md`](../04-demo/what-is-public-vs-private.md) — Deeper explanation with examples
-- [`CONTRIBUTING.md`](../../CONTRIBUTING.md) — Contribution rules that enforce this boundary
+This private layer may be demonstrated in controlled contexts such as the live demo, but it should not be committed to this repository.
+
+---
+
+## Why the boundary matters
+
+A public repository must support:
+- transparency
+- learning
+- reproducibility
+- open collaboration
+
+But a real operating system also contains:
+- confidential organizational logic
+- competitive execution details
+- business-sensitive materials
+- operational assets that require governance
+
+If these two layers are mixed, the result is:
+- avoidable risk
+- weak security
+- architectural confusion
+- poor governance
+
+A clean boundary makes the project stronger, not weaker.
+
+---
+
+## Public examples are not production exports
+
+Examples in this repository must always be:
+
+- abstracted
+- genericized
+- public-safe
+- clearly labeled as examples, placeholders, or templates
+
+They should illustrate the framework, not expose the private working implementation.
+
+This applies especially to:
+- agent design examples
+- prompt structures
+- workflow templates
+- architecture diagrams
+- implementation starter kits
+
+---
+
+## Boundary test
+
+Before adding any file, ask:
+
+### 1. Is this content safe for worldwide public access?
+If no, do not commit it.
+
+### 2. Does this file teach the architecture without exposing private operations?
+If no, rewrite it as a public-safe abstraction.
+
+### 3. Would publishing this weaken business security, confidentiality, or governance?
+If yes, keep it private.
+
+### 4. Is this an example, a template, or a real production export?
+If it is a production export, it probably does not belong here.
+
+---
+
+## Practical rule for contributors
+
+When information is useful conceptually but unsafe operationally:
+
+- do not omit the idea
+- do not expose the real implementation
+- create a public-safe placeholder or template instead
+
+Examples:
+- instead of a real private prompt → publish a prompt template
+- instead of a real private workflow → publish an abstract workflow pattern
+- instead of a real internal knowledge base → publish a knowledge base structure example
+
+---
+
+## Relationship to the live demo
+
+The live demo validates that the framework works in a real environment.
+
+That does **not** mean the real environment should be open-sourced.
+
+The repository and the demo play different roles:
+
+- **repository** → public architecture and public-safe patterns
+- **demo** → proof that the framework already works in practice
+
+This separation is intentional and healthy.
+
+---
+
+## Final principle
+
+The repository should make the framework understandable, reproducible, and inspiring.
+
+It should not expose confidential operations.
+
+> Share the pattern.  
+> Protect the implementation.

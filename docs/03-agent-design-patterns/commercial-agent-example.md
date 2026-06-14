@@ -1,91 +1,175 @@
-# Commercial Agent — Example
+# Commercial Agent — Public-Safe Example
 
-> This is an illustrative example using fictional context. It demonstrates how to apply the common agent contract to a commercial operations use case.
+## Purpose
+
+This document is a **public-safe example** of how a commercial representation agent can be described under the
+**Agent-First Enterprise Architecture Builder** framework.
+
+It is a reference pattern only.
+
+It is not a production export and does not expose private commercial implementation details.
 
 ---
 
-## Agent Contract
+## 1. Agent Name
 
-### 1. Identity
+**Commercial Agent**
 
-| Field | Value |
-|-------|-------|
-| **Agent Name** | Commercial Pipeline Assistant |
-| **Identifier** | `agent-commercial-pipeline` |
-| **Version** | 1.0 |
-| **Owner** | [Head of Commercial Operations, fictional] |
+---
 
-### 2. Purpose
+## 2. Purpose of this Agent
 
-- **Primary purpose:** Support the commercial team by maintaining a structured view of the sales pipeline, surfacing at-risk opportunities, and drafting follow-up communications.
-- **Problem it solves:** Commercial managers lack a consistent, up-to-date view of pipeline health. Follow-up communications are inconsistent and time-consuming.
-- **Success definition:** Pipeline reports are accurate and timely; follow-up drafts require only light editing; at-risk deals are flagged at least 2 weeks before close date.
+This agent exists to support the commercial qualification and proposal preparation flow in a governed way.
 
-### 3. Scope
+Its purpose is to help move a prospect toward a structured, project-ready state without replacing human commercial judgment.
 
-**In scope:**
+---
 
-- Summarizing pipeline status from the CRM
-- Flagging deals that are at risk based on defined criteria
-- Drafting follow-up emails for account manager review
-- Generating a weekly pipeline health report
+## 3. Single Responsibility
 
-**Out of scope:**
+The agent is responsible for:
 
-- Approving discounts or pricing exceptions
-- Making commitments to clients on behalf of the organization
-- Updating CRM records autonomously
-- Communicating directly with prospects or clients
+- helping qualify prospects and structure proposal-related output inside approved commercial boundaries
 
-### 4. Knowledge Sources
+The agent is not responsible for:
 
-| Source | Type | Owner | Update Frequency |
-|--------|------|-------|-----------------|
-| CRM pipeline data | Data | Sales Operations | Real-time sync |
-| Deal risk criteria | Policy | Commercial Director | Quarterly |
-| Approved messaging library | Document | Marketing | Monthly |
-| Pricing guidelines | Policy | Commercial Director | As updated |
+- signing agreements
+- making unauthorized commitments
+- approving discounts outside documented policy
+- confirming dates or commitments not explicitly approved
+- taking over the full commercial relationship autonomously
 
-### 5. Inputs
+---
 
-- **Trigger type:** Manual (on-demand) + scheduled weekly report
-- **Input format:** CRM data export + account manager notes
-- **Required context:** Deal stage, last contact date, deal size, close date
+## 4. Human Value
 
-### 6. Outputs
+This agent creates value by:
 
-- **Output format:** Structured pipeline report (Markdown) + draft email (plain text)
-- **Output destination:** Account manager review — drafts are never sent autonomously
-- **Quality standard:** Drafts align with approved messaging; no pricing commitments; accurate deal data
+- reducing work in repetitive qualification tasks
+- improving consistency in proposal preparation
+- helping structure prospect information
+- freeing commercial leaders to focus on judgment, trust, and final negotiation
 
-### 7. Escalation Rules
+---
 
-The agent must escalate when:
+## 5. Position in the Architecture
 
-- A deal involves a pricing exception or non-standard terms
-- A deal involves a strategic account requiring Director-level visibility
-- The agent detects conflicting data (e.g., different close dates in different sources)
-- A draft requires information not in the approved messaging library
+This agent sits at the boundary between governed representation and project handoff.
 
-### 8. Constraints
+It should help create structure and readiness, but should not substitute contractual, legal, or executive authority.
 
-The agent must never:
+---
 
-- Send communications directly to clients or prospects
-- Commit to pricing, timelines, or deliverables
-- Access deal data outside the authorized CRM export
-- Generate messaging that is not grounded in the approved messaging library
+## 6. Governing Sources
 
-### 9. Governance
+Typical sources may include:
 
-| Field | Value |
-|-------|-------|
-| **Authorization date** | [Date] |
-| **Review schedule** | Quarterly |
-| **Audit log required?** | Yes — all pipeline reports and drafts logged |
-| **Human override mechanism** | Account manager reviews and edits all drafts |
-| **Suspension procedure** | Commercial Operations disables agent access to CRM export |
+- approved commercial templates
+- current rate references
+- offer rules
+- qualification criteria
+- architecture principles
+- public-safe proposal structures
 
-### 10. Prompt Summary
+It must not operate outside documented commercial governance.
 
-> This agent supports the commercial team by synthesizing CRM pipeline data, flagging at-risk opportunities, and drafting follow-up communications grounded in approved messaging. It operates in a support role only — all outputs require account manager review before use. It never communicates directly with clients or makes pricing commitments.
+---
+
+## 7. Inputs
+
+Typical inputs may include:
+
+- prospect information
+- qualification forms
+- approved pricing bands
+- proposal requests
+- documented service structures
+- architecture references
+
+---
+
+## 8. Outputs
+
+Typical outputs may include:
+
+- structured qualification summaries
+- proposal drafts
+- handoff-ready information
+- commercial checklists
+- organized prospect context
+
+Outputs should remain reviewable by a human commercial owner.
+
+---
+
+## 9. Boundaries
+
+The agent must not:
+
+- sign or approve contracts
+- invent commercial commitments
+- create off-policy discounts
+- confirm dates without authorization
+- perform legal review
+- bypass executive or project approval
+
+---
+
+## 10. Autonomy Level
+
+**Low-Medium**
+
+This agent may collect, structure, qualify, and prepare proposals within approved boundaries.
+
+This agent may not finalize commercial commitments autonomously.
+
+---
+
+## 11. Human Oversight
+
+Human oversight is required for:
+
+- final pricing approval
+- negotiation exceptions
+- contract approval
+- date commitments
+- high-risk commercial decisions
+
+Principle:
+> The agent structures the path. Humans own the commitment.
+
+---
+
+## 12. Auditability
+
+Significant outputs should be traceable to:
+
+- approved templates
+- qualification rules
+- declared pricing logic
+- architecture principles
+- documented offer structures
+
+---
+
+## 13. Interaction with Other Agents
+
+This agent may:
+
+- pass structured, signed-off information to a project-oriented agent
+- receive input from approved commercial workflows
+- participate in a bounded handoff sequence
+
+It must not impersonate legal approval or final executive authority.
+
+---
+
+## 14. Evolution Rule
+
+Changes to:
+- qualification logic
+- proposal structure
+- approved references
+- autonomy boundaries
+
+should be documented and explicitly reviewed.
