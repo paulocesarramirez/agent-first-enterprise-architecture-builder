@@ -218,7 +218,7 @@ You do not need to rebuild this from scratch. **Any** organization can adopt the
 
 The framework is the reusable layer; your organization supplies its own knowledge, governance, and execution context — and Copilot helps you assemble it with detail.
 
-> 🔜 A dedicated, step-by-step implementation guide for this is coming in an upcoming section of the repository.
+> 🧭 **Start here:** the guided implementation lives in [`docs/05-copilot-implementation/`](./docs/05-copilot-implementation/) — run the [implementation diagnostic](./docs/05-copilot-implementation/implementation-diagnostic.md) first, then follow the [implementation playbook](./docs/05-copilot-implementation/implementation-playbook.md). See [`repo-implementation-guidelines.md`](./docs/05-copilot-implementation/repo-implementation-guidelines.md) for the full entry point.
 
 ---
 

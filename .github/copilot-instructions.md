@@ -21,6 +21,13 @@ When assisting with design or documentation:
 - Ask "what is the agent's purpose?" before proposing any design.
 - Reference existing framework files in `docs/02-framework/` when applicable.
 
+## Guided Implementation ("implement this for my company")
+When a user asks to implement, adopt, or reproduce this framework for their own organization (e.g., "I want this implemented for my company"):
+1. **Run the diagnostic first** — follow `docs/05-copilot-implementation/implementation-diagnostic.md` to determine the user's Microsoft stack and preferred build style, producing a recommended path (No-Code = Declarative agents, Low-Code = Copilot Studio, Pro-Code = Azure AI Foundry + Microsoft Agent Framework, or Hybrid).
+2. **Then follow the playbook** — use `docs/05-copilot-implementation/implementation-playbook.md` to guide the build step by step, using this repo as the source of truth.
+3. Keep the diagnostic simple and conversational; never block on perfect answers; infer safe defaults and note assumptions.
+4. Keep everything public-safe: never collect or echo secrets, tenant IDs, or confidential business detail.
+
 ## Public-Safe Content Rule
 This is the governing constraint for everything generated — files, docs, code scaffolding, examples, diagrams, and templates.
 
@@ -68,5 +75,8 @@ Prioritize (in order): **clarity → explicit structure → modularity → gover
 - `docs/00-overview/architecture-overview.md` — Start here for context
 - `docs/02-framework/architecture-layers.md` — The core layered model
 - `docs/03-agent-design-patterns/common-agent-contract.md` — Standard agent structure
+- `docs/05-copilot-implementation/repo-implementation-guidelines.md` — Entry point for implementing the framework for an organization
+- `docs/05-copilot-implementation/implementation-diagnostic.md` — Stack & build-style diagnostic (run first)
+- `docs/05-copilot-implementation/implementation-playbook.md` — Step-by-step build per path
 - `docs/05-copilot-implementation/safe-scaffolding-instructions.md` — How to add new content safely
 - `docs/05-copilot-implementation/naming-conventions.md` — File and folder naming rules
