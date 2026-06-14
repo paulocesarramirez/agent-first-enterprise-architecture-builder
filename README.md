@@ -172,7 +172,7 @@ The tools do not define the organization.
 
 ## 🤖 Current Real-World Validation
 
-This framework is already validated through a real implementation at EmprendHEC.
+This framework is already validated through a real implementation at **EmprendHEC, a Microsoft Partner company**.
 
 The internal working ecosystem currently includes four active agents:
 
@@ -180,6 +180,13 @@ The internal working ecosystem currently includes four active agents:
 - **M365 Watcher**
 - **Commercial Agent**
 - **Editorial Assistant**
+
+These are not staged demos. At EmprendHEC, this ecosystem runs real work **every single day**:
+
+- **Winning new customers** — the Commercial Agent qualifies prospects, prepares proposals, and supports closing with purpose.
+- **Creating content** — the Editorial Assistant helps produce content for the company's main website and social media.
+- **Running projects** — the PM Assistant analyzes active projects, while the M365 Watcher prepares full monthly monitoring reports.
+- **Building this very repository** — the same ecosystem helped structure and document the public-safe materials you are reading now.
 
 These agents operate under a shared architecture, with common principles such as:
 
@@ -192,6 +199,26 @@ These agents operate under a shared architecture, with common principles such as
 The live demo shows that real implementation.
 
 However, the operational system itself is not included in this public repository because it contains confidential execution details.
+
+📸 **See it working:** public-safe screenshots of the live EmprendHEC environment — the SharePoint knowledge base, the shared agent contract, an agent design document, and a working agent inside Microsoft 365 — are in [`docs/00-overview/public-demo-scope.md`](./docs/00-overview/public-demo-scope.md) and cataloged in [`docs/04-demo/screenshots-and-diagrams.md`](./docs/04-demo/screenshots-and-diagrams.md).
+
+---
+
+## 🧑‍💻 How Any Company Can Use This
+
+You do not need to rebuild this from scratch. **Any** organization can adopt the approach by pointing an AI assistant at this repository:
+
+1. Share this repo as a reference with **Microsoft 365 Copilot** or **GitHub Copilot**.
+2. Ask: _"I want this implemented for my company."_
+3. Copilot uses the architecture, framework, and patterns here to guide your implementation — adapted to **your** Microsoft stack and your preferred build style:
+
+- **No-Code** — SharePoint, Teams, Planner, and Microsoft 365 Copilot agents
+- **Low-Code** — Power Platform, Copilot Studio, and connectors
+- **Pro-Code** — custom agents and integrations
+
+The framework is the reusable layer; your organization supplies its own knowledge, governance, and execution context — and Copilot helps you assemble it with detail.
+
+> 🔜 A dedicated, step-by-step implementation guide for this is coming in an upcoming section of the repository.
 
 ---
 

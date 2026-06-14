@@ -32,6 +32,9 @@ Fictional organizations, placeholder names, and illustrative data. These demonst
 ### Diagrams
 Visual representations of structures and relationships. No operational data.
 
+### Public-safe screenshots
+Structural views of the live implementation — site organization, folder structure, agent names, and an agent answering a generic query. These show *that the pattern works* without exposing knowledge content, prompts, or configuration. The demo screenshots in [`Screenshots/`](Screenshots/) are an example.
+
 ---
 
 ## What Is Private (and Why)

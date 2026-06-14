@@ -32,81 +32,65 @@ All screenshots in this document must be **public-safe**. Before adding an image
 
 If an image would expose any of the above, **redact, blur, or recreate it with placeholder data** before adding it.
 
-**Suggested storage:** place image files in `assets/visuals/` and reference them with relative paths. Use descriptive, kebab-case names such as `example-pm-assistant-overview.png`.
+**Storage:** the public-safe screenshots for this demo live in [`../04-demo/Screenshots/`](../04-demo/Screenshots/) and are cataloged in [../04-demo/screenshots-and-diagrams.md](../04-demo/screenshots-and-diagrams.md). The selection below highlights one representative image per framework layer; the catalog lists all of them.
 
 ---
 
 ## What the demo shows
 
-### 1. The agent ecosystem at a glance
+The screenshots below walk the four layers of the framework — from the knowledge base, through governance and agent design, to a live agent answering a real query inside Microsoft 365.
 
-A high-level view of the four agents operating under one shared architecture and governance model.
+### 1. Knowledge layer — the source of truth in SharePoint
 
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![Agent ecosystem overview](../../assets/visuals/example-agent-ecosystem-overview.png)`
->
-> **Caption:** _The four active agents (PM Assistant, M365 Watcher, Commercial Agent, Editorial Assistant) operating under a shared source of truth._
+The SharePoint site *"EmprendHEC - Arquitectura Información"* holds the structured knowledge every agent consults: a README that explains the library, area guides, brand and identity manuals, and the `Agentes` and monthly-monitoring folders.
 
----
+![EmprendHEC SharePoint knowledge library](<../04-demo/Screenshots/01-Screenshot Librería Principal-Arquitectura de Información.png>)
 
-### 2. PM Assistant
-
-Coordinates project work, surfaces priorities, and supports planning while keeping decisions with humans.
-
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![PM Assistant](../../assets/visuals/example-pm-assistant.png)`
->
-> **Caption:** _PM Assistant proposing next actions; the human approves before anything proceeds._
+**Caption:** _The institutional knowledge base — one structured, governed source of truth rather than scattered files._
 
 ---
 
-### 3. M365 Watcher
+### 2. Governance layer — the shared agent contract
 
-Monitors the Microsoft 365 environment and signals relevant changes back into the workflow.
+The `Agentes/` folder holds the documents every agent inherits: the architecture, the common principles, the interaction contract, and naming conventions — plus a dedicated subfolder per agent.
 
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![M365 Watcher](../../assets/visuals/example-m365-watcher.png)`
->
-> **Caption:** _M365 Watcher detecting and routing a relevant signal across the workspace._
+![Agentes folder with shared agent contract](<../04-demo/Screenshots/02-Screenshot-Carpeta Agentes.png>)
+
+**Caption:** _Common principles and an interaction contract that every agent must respect — governance applied consistently._
 
 ---
 
-### 4. Commercial Agent
+### 3. Generation layer — how an agent is designed
 
-Supports commercial activity with structured, governed assistance grounded in the source of truth.
+Each agent is defined by a public-safe design document: executive summary, knowledge sources, parameters and limits, expected behavior, and test cases. The instruction prompt itself stays private.
 
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![Commercial Agent](../../assets/visuals/example-commercial-agent.png)`
->
-> **Caption:** _Commercial Agent generating a structured draft for human review (placeholder data shown)._
+![Commercial Agent design document](<../04-demo/Screenshots/08-Screenshot-Diseño de Agente Comercial.png>)
+
+**Caption:** _The Commercial Agent design doc — grounded in the knowledge and governance layers, with the prompt kept private._
 
 ---
 
-### 5. Editorial Assistant
+### 4. Generation layer — the agents published in Microsoft 365
 
-Helps produce and refine content while preserving human editorial judgment.
+The agents are published in the Microsoft 365 Copilot Agent Store, where the team invokes them as part of normal work.
 
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![Editorial Assistant](../../assets/visuals/example-editorial-assistant.png)`
->
-> **Caption:** _Editorial Assistant suggesting revisions; final editorial control stays with the human._
+![EmprendHEC agents in the Microsoft 365 Copilot Agent Store](<../04-demo/Screenshots/09-Screenshot-Vista Agentes en M365.png>)
+
+**Caption:** _PM Assistant, M365 Watcher, Commercial Agent, and Editorial Assistant — running inside Microsoft 365, not a separate tool._
+
+> **Living proof.** This is not a staged demo tenant. These agents are deployed in EmprendHEC's own Microsoft 365 environment and are used to run real internal work **on a daily basis** — the company operates this way today. That is the point of the framework: it is validated in live operation, not just described on paper.
 
 ---
 
-### 6. The Microsoft 365 execution layer
+### 5. Execution layer — an agent at work
 
-Where the architecture becomes action — SharePoint, Teams, Planner, Outlook, and Microsoft 365 Copilot.
+A worked example: the Commercial Agent responds to a real query, grounded in the commercial operative guide and bounded by its defined scope.
 
-> _Screenshot placeholder — replace with a public-safe image._
->
-> `![Microsoft 365 execution layer](../../assets/visuals/example-m365-execution-layer.png)`
->
-> **Caption:** _Agents operating within the existing Microsoft 365 environment rather than a separate tool._
+![Commercial Agent answering a query in Microsoft 365 Copilot](<../04-demo/Screenshots/10-Screenshot-Vista Agente Comercial.png>)
+
+**Caption:** _The Commercial Agent assisting with commercial work; the human stays in control of every strategic decision._
+
+> The remaining screenshots — the `Guías por área` folder, the README, the identity manual, the Agent-Ready brand guide, and the commercial operative guide — are in the [full catalog](../04-demo/screenshots-and-diagrams.md).
 
 ---
 
@@ -127,6 +111,8 @@ For the full rationale, see [what-is-public-vs-private.md](../04-demo/what-is-pu
 ## How to read the screenshots
 
 The screenshots are meant to answer one question: **"Does this approach actually work in a real organization?"**
+
+Several of the document screenshots are captured with the Word **Navigation Pane** open, showing each document's full heading outline — visible evidence that these are complete, structured, real documents from a working implementation, not slides or mockups.
 
 They are **evidence of the pattern**, not a blueprint of the private system. Use them alongside:
 
