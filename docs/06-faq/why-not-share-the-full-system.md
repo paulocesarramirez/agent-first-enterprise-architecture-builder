@@ -58,3 +58,7 @@ You do not share:
 - The contracts and costs of a live project
 
 This repo is the book. Your implementation is the building.
+
+---
+
+See also: [what is public vs. private](../04-demo/what-is-public-vs-private.md) and the [public repo boundary](../01-principles/public-repo-boundary.md).

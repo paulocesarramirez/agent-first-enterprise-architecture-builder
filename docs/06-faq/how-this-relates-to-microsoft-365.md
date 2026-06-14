@@ -11,7 +11,7 @@ The architectural principles and four-layer model apply regardless of which plat
 The reference implementation uses Microsoft 365 because:
 
 1. **Breadth of coverage** — M365 covers communication (Teams, Outlook), documents (SharePoint, OneDrive), tasks (Planner), and data (Power Platform)
-2. **Agent infrastructure** — Microsoft 365 Agents SDK and Copilot Studio provide structured agent deployment capabilities
+2. **Agent infrastructure across build styles** — the Microsoft stack supports the full spectrum: Declarative agents (No-Code), Copilot Studio (Low-Code), and Azure AI Foundry with the Microsoft Agent Framework (Pro-Code)
 3. **Enterprise prevalence** — M365 is the dominant enterprise platform, making examples broadly relevant
 4. **Copilot integration** — GitHub Copilot (used to maintain this repo) and Microsoft 365 Copilot (used in the execution layer) are part of the same ecosystem
 
@@ -25,9 +25,22 @@ The reference implementation uses Microsoft 365 because:
 | Planner | Task and project management actions |
 | Power Automate | Workflow orchestration |
 | Microsoft Graph API | Programmatic access to M365 data |
-| M365 Agents SDK | Agent deployment and integration framework |
+| Declarative agents (Copilot agent builder) | No-Code agent authoring grounded on M365 knowledge |
 | Copilot Studio | Low-code agent configuration |
+| Azure AI Foundry + Microsoft Agent Framework | Pro-code agents with full orchestration |
 | Microsoft 365 Copilot | AI assistance embedded in M365 apps |
+
+## Choosing a build style
+
+The framework maps three build styles to Microsoft surfaces:
+
+| Style | Surface |
+|-------|---------|
+| **No-Code** | Declarative agents (Microsoft 365 Copilot agent builder) |
+| **Low-Code** | Microsoft Copilot Studio |
+| **Pro-Code** | Azure AI Foundry + Microsoft Agent Framework |
+
+The [implementation diagnostic](../05-copilot-implementation/implementation-diagnostic.md) recommends the right style for your stack, and the [implementation playbook](../05-copilot-implementation/implementation-playbook.md) walks through building on it.
 
 ## If You Don't Use Microsoft 365
 

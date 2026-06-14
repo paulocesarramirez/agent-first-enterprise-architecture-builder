@@ -47,7 +47,7 @@ The principles scale. The complexity of implementation scales with the organizat
 
 ## Industries
 
-The framework has been applied in professional services contexts. The principles are relevant across:
+The framework is validated in a real **education- and entrepreneurship-focused** organization (EmprendHEC, a Microsoft Partner company), where it runs daily operations. The principles are relevant across:
 
 - Financial services
 - Healthcare and life sciences
@@ -60,4 +60,9 @@ Domain-specific compliance requirements (HIPAA, GDPR, SOX, etc.) should be incor
 
 ## Where to Start
 
-See the [starter kits](../../starter-kits/) for entry points appropriate to different organizational contexts.
+The fastest way to start is the **guided implementation**: tell Copilot or GitHub Copilot _"I want this implemented for my company"_ with this repo as the reference. It will:
+
+1. Run the [implementation diagnostic](../05-copilot-implementation/implementation-diagnostic.md) to determine your Microsoft stack and preferred build style (**No-Code** = Declarative agents, **Low-Code** = Copilot Studio, **Pro-Code** = Azure AI Foundry + Microsoft Agent Framework, or **Hybrid**).
+2. Walk you through the [implementation playbook](../05-copilot-implementation/implementation-playbook.md), step by step, using this repo as the source of truth.
+
+See [repo-implementation-guidelines.md](../05-copilot-implementation/repo-implementation-guidelines.md) for the full entry point, or browse the [starter kits](../../starter-kits/) for entry points appropriate to different organizational contexts.

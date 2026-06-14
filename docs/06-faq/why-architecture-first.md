@@ -56,3 +56,5 @@ The investment in architecture pays compounding returns as the number of agents 
 5. Iterate with data, not intuition
 
 This is not slower. It is more reliable.
+
+> This sequence is operationalized, step by step, in the [implementation playbook](../05-copilot-implementation/implementation-playbook.md) — which builds the Knowledge and Governance layers before any agent.
