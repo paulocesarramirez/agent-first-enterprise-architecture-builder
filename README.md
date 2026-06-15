@@ -55,6 +55,16 @@ Throughout this documentation, EmprendHEC appears as the **real-world reference 
 
 ---
 
+## 🎬 Live Demo Video
+
+Watch the framework in action — recorded for the **Agents League Hackathon**:
+
+[![Video Demo - Agent First Enterprise Architecture Builder - Agents League Hackathon](https://img.youtube.com/vi/9_NN3AMkOaw/maxresdefault.jpg)](https://www.youtube.com/watch?v=9_NN3AMkOaw)
+
+▶️ [Watch on YouTube: Agent-First Enterprise Architecture Builder — Agents League Hackathon](https://www.youtube.com/watch?v=9_NN3AMkOaw)
+
+---
+
 ## 🔥 The Paradigm Shift
 
 ### Traditional approach

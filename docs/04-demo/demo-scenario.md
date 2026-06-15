@@ -76,7 +76,15 @@ The operations briefing is compiled from reviewed agent outputs — each in a fr
 | Pipeline summary | 30min | 10min | ~67% |
 | Briefing compilation | 90min | 20min | ~78% |
 | Total | 3.5h | 45min | ~79% |
+---
 
+## Watch the Demo
+
+The Agents League Hackathon demo video shows this scenario — and the full framework — operating live inside Microsoft 365:
+
+[![Video Demo - Agent First Enterprise Architecture Builder - Agents League Hackathon](https://img.youtube.com/vi/9_NN3AMkOaw/maxresdefault.jpg)](https://www.youtube.com/watch?v=9_NN3AMkOaw)
+
+▶️ [Watch on YouTube: Agent-First Enterprise Architecture Builder — Agents League Hackathon](https://www.youtube.com/watch?v=9_NN3AMkOaw)
 ---
 
 ## What This Scenario Does NOT Illustrate

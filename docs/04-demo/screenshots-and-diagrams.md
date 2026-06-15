@@ -2,7 +2,23 @@
 
 ## Overview
 
-This document catalogs the visual assets for the demo: the **Mermaid diagrams** that model the framework, and the **public-safe screenshots** of the live EmprendHEC implementation stored in [`Screenshots/`](Screenshots/).
+This document catalogs the visual assets for the demo: the **video demo**, the **Mermaid diagrams** that model the framework, and the **public-safe screenshots** of the live EmprendHEC implementation stored in [`Screenshots/`](Screenshots/).
+
+## Video Demo
+
+The full demo was recorded for the **Agents League Hackathon** and shows the framework operating as a live, integrated system inside Microsoft 365.
+
+[![Video Demo - Agent First Enterprise Architecture Builder - Agents League Hackathon](https://img.youtube.com/vi/9_NN3AMkOaw/maxresdefault.jpg)](https://www.youtube.com/watch?v=9_NN3AMkOaw)
+
+▶️ [Watch on YouTube: Agent-First Enterprise Architecture Builder — Agents League Hackathon](https://www.youtube.com/watch?v=9_NN3AMkOaw)
+
+The video walks through:
+- The four-layer framework (Knowledge → Governance → Generation → Execution)
+- The SharePoint knowledge architecture and shared agent contract
+- The live EmprendHEC agents operating inside Microsoft 365 Copilot
+- The human-first governance model in practice
+
+---
 
 ## Available Diagrams
 
