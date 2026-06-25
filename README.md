@@ -184,6 +184,20 @@ The tools do not define the organization.
 
 ---
 
+## 🛡️ Enterprise Governance & Readiness
+
+The four layers are reinforced by a set of enterprise-readiness documents that keep adoption safe, measurable, and human-led:
+
+- **Governance hierarchy** — the organization's own documentation is the **primary** governing authority. Platform Responsible AI controls (Microsoft RAI, Azure AI Content Safety) are **subordinate, complementary safety nets** — never the top of the stack. See [`responsible-ai-and-governance-hierarchy.md`](./docs/02-framework/responsible-ai-and-governance-hierarchy.md).
+- **Security & compliance** — Microsoft Entra ID, Purview, and Conditional Access mapped as subordinate enforcement of documented governance. See [`security-and-compliance-layer.md`](./docs/02-framework/security-and-compliance-layer.md).
+- **Human-in-the-loop risk & failure governance** — fully autonomous multi-step reasoning compounds errors; an AI led by a human who verifies the core steps minimizes bad outcomes and keeps human judgment sharp. See [`human-in-the-loop-risk-and-failure-governance.md`](./docs/02-framework/human-in-the-loop-risk-and-failure-governance.md).
+- **Human-orchestrated multi-agent pattern** — the **human is the primary orchestrator**; specialized agents solve bounded problems and **Microsoft Copilot Cowork** carries out the resulting work. See [`human-orchestrated-multi-agent-pattern.md`](./docs/03-agent-design-patterns/human-orchestrated-multi-agent-pattern.md).
+- **Model & build-surface selection** — guidance per role, including a recommendation of **Grok for a non-biased Personal Strategic AI Agent**, with Microsoft-native models for execution agents. See [`model-and-build-surface-selection.md`](./docs/05-copilot-implementation/model-and-build-surface-selection.md).
+- **Value & metrics** — measure operational results **and** preserved human strategic engagement. See [`value-and-metrics.md`](./docs/02-framework/value-and-metrics.md).
+- **Adoption maturity model** — a staged path that keeps human orchestration intact at every level. See [`adoption-maturity-model.md`](./docs/00-overview/adoption-maturity-model.md).
+
+---
+
 ## 🤖 Current Real-World Validation
 
 This framework is already validated through a real implementation at **EmprendHEC, a Microsoft Partner company**.
@@ -273,6 +287,10 @@ This repository is intended to include:
 - framework definitions
 - reusable design principles
 - agent design patterns
+- the governance hierarchy (organization documentation above platform Responsible AI)
+- security, compliance, and risk/failure governance patterns
+- human-orchestrated multi-agent and Copilot Cowork patterns
+- model selection, value/metrics, and adoption maturity guidance
 - public-safe examples
 - implementation guidance for GitHub Copilot
 
