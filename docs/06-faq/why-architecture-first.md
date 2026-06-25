@@ -38,7 +38,7 @@ Architecture answers the questions that prevent these problems before they occur
 
 - **What do agents need to know?** → Knowledge architecture
 - **What are agents allowed to do?** → Governance layer
-- **How do agents generate reliable outputs?** → Generation layer design
+- **How do agents generate reliable outputs?** → Capability Generation layer design
 - **How are agent actions controlled?** → Execution layer governance
 
 ### Architecture Is Not Bureaucracy

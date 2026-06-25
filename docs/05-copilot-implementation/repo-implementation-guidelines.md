@@ -23,7 +23,7 @@ This repository is the **public, reusable framework** — the architecture, prin
 To implement it, you don't copy a system. You **reproduce the four layers** in your own Microsoft environment, using this repo as your **source of truth for the pattern**:
 
 ```
-Knowledge  →  Governance  →  Generation  →  Execution
+Knowledge  →  Governance  →  Capability Generation  →  Execution
 ```
 
 Your organization supplies its own knowledge, governance decisions, and execution context. Copilot helps you assemble them — adapted to your Microsoft stack and your preferred build style.
@@ -33,7 +33,7 @@ Your organization supplies its own knowledge, governance decisions, and executio
 ## The implementation journey
 
 ### Step 1 — Run the diagnostic
-Open [implementation-diagnostic.md](implementation-diagnostic.md). Copilot asks a few simple questions about your Microsoft 365 plan, Copilot subscriptions, Azure/AI Foundry access, Power Platform/Fabric, and preferred build style. It returns a recommended **path**:
+Open [implementation-diagnostic.md](implementation-diagnostic.md). Copilot asks a few simple questions about your Microsoft 365 plan, Copilot subscriptions, Azure/AI Foundry access, Power Platform/Fabric, preferred build style, and cost posture. It returns a recommended **path**:
 
 | Path | Build surface |
 |------|---------------|
@@ -45,7 +45,7 @@ Open [implementation-diagnostic.md](implementation-diagnostic.md). Copilot asks 
 ### Step 2 — Follow the playbook
 Open [implementation-playbook.md](implementation-playbook.md). It walks you through:
 - **Part 1 — Universal foundation** (Knowledge + Governance + first agent design) — same for everyone.
-- **Part 2 — Path-specific build** (the Generation layer) — depends on your path.
+- **Part 2 — Path-specific build** (the Capability Generation layer) — depends on your path.
 - **Part 3 — Execution & governance** — putting it to work inside Microsoft 365.
 
 ### Step 3 — Stay public-safe
@@ -85,4 +85,6 @@ These hold no matter which path you choose:
 - [implementation-playbook.md](implementation-playbook.md) — then here
 - [safe-scaffolding-instructions.md](safe-scaffolding-instructions.md) — keep it public-safe
 - [naming-conventions.md](naming-conventions.md) — naming rules
+- [model-and-build-surface-selection.md](model-and-build-surface-selection.md) — model and role selection
+- [../02-framework/responsible-ai-and-governance-hierarchy.md](../02-framework/responsible-ai-and-governance-hierarchy.md) — governance hierarchy
 - [../06-faq/can-any-company-use-this.md](../06-faq/can-any-company-use-this.md) — yes, and why

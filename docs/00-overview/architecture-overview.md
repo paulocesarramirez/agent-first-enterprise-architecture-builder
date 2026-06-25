@@ -197,3 +197,12 @@ This project defines a category:
 It is not merely about building agents.
 
 It is about building the architecture from which intelligent, governed, human-aligned enterprise capability can emerge.
+
+
+---
+
+## Related roadmap enhancements
+
+- [adoption-maturity-model.md](adoption-maturity-model.md)
+- [../02-framework/security-and-compliance-layer.md](../02-framework/security-and-compliance-layer.md)
+- [../02-framework/responsible-ai-and-governance-hierarchy.md](../02-framework/responsible-ai-and-governance-hierarchy.md)
