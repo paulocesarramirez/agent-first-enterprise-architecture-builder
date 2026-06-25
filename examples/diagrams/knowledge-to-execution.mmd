@@ -1,29 +1,29 @@
 %%{init: {'theme': 'default'}}%%
 flowchart LR
     subgraph KNOW["Knowledge Layer"]
-        K1[Organizational\nPrinciples]
+        K1[Organizational<br/>Principles]
         K2[Business Rules]
         K3[Process Docs]
         K4[Domain Knowledge]
     end
 
     subgraph GOV["Governance Layer"]
-        G1[Agent Scope\nDefinition]
-        G2[Escalation\nRules]
-        G3[Human\nOwner]
+        G1[Agent Scope<br/>Definition]
+        G2[Escalation<br/>Rules]
+        G3[Human<br/>Owner]
     end
 
     subgraph GEN["Generation Layer"]
-        P1[Prompt with\nKnowledge Context]
-        P2[AI Model\nReasoning]
-        P3[Structured\nOutput]
+        P1[Prompt with<br/>Knowledge Context]
+        P2[AI Model<br/>Reasoning]
+        P3[Structured<br/>Output]
     end
 
     subgraph EXEC["Execution Layer"]
-        EX1[Human\nReview]
+        EX1[Human<br/>Review]
         EX2{Approved?}
-        EX3[Action in\nEnterprise System]
-        EX4[Escalate /\nRevise]
+        EX3[Action in<br/>Enterprise System]
+        EX4[Escalate /<br/>Revise]
     end
 
     K1 & K2 & K3 & K4 --> G1
