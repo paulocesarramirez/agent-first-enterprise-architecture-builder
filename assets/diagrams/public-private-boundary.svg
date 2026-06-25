@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 760" width="820" height="760" font-family="'Segoe UI', Arial, sans-serif" role="img" aria-label="Public / Private boundary">
+  <title>Public–Private Boundary</title>
+  <desc>Rendered export of examples/diagrams/public-private-boundary.mmd — the public-safe test that decides what belongs in the public repository versus the private implementation.</desc>
+  <rect width="820" height="760" fill="#ffffff"/>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- PUBLIC -->
+  <rect x="40" y="20" width="740" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="46" font-size="16" font-weight="700" fill="#14532d">Public Repository (This Repo)</text>
+  <g fill="#ffffff" stroke="#16a34a" stroke-width="1.5">
+    <rect x="58"  y="62" width="135" height="80" rx="8"/>
+    <rect x="205" y="62" width="135" height="80" rx="8"/>
+    <rect x="352" y="62" width="135" height="80" rx="8"/>
+    <rect x="499" y="62" width="135" height="80" rx="8"/>
+    <rect x="646" y="62" width="120" height="80" rx="8"/>
+  </g>
+  <g font-size="12.5" fill="#14532d" text-anchor="middle">
+    <text x="125" y="98">Architectural</text><text x="125" y="116">Principles</text>
+    <text x="272" y="98">Four-Layer</text><text x="272" y="116">Framework</text>
+    <text x="419" y="98">Agent Design</text><text x="419" y="116">Patterns</text>
+    <text x="566" y="98">Generic</text><text x="566" y="116">Examples</text>
+    <text x="706" y="98">Diagrams &amp;</text><text x="706" y="116">Templates</text>
+  </g>
+
+  <!-- BOUNDARY -->
+  <rect x="40" y="250" width="740" height="200" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="60" y="276" font-size="16" font-weight="700" fill="#422006">The Boundary</text>
+  <!-- decision diamond -->
+  <polygon points="135,310 215,355 135,400 55,355" fill="#ffffff" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="135" y="350" font-size="12.5" fill="#422006" text-anchor="middle">Public-Safe</text>
+  <text x="135" y="368" font-size="12.5" fill="#422006" text-anchor="middle">Test</text>
+  <g fill="#ffffff" stroke="#ca8a04" stroke-width="1.5">
+    <rect x="300" y="300" width="150" height="50" rx="8"/>
+    <rect x="470" y="300" width="150" height="50" rx="8"/>
+    <rect x="300" y="370" width="150" height="50" rx="8"/>
+    <rect x="470" y="370" width="150" height="50" rx="8"/>
+  </g>
+  <g font-size="12.5" fill="#422006" text-anchor="middle">
+    <text x="375" y="330">Generalizable?</text>
+    <text x="545" y="330">No proprietary data?</text>
+    <text x="375" y="400">No credentials?</text>
+    <text x="545" y="400">Illustrative only?</text>
+  </g>
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M215 345 L298 322"/>
+    <path d="M215 352 L468 322"/>
+    <path d="M215 360 L298 392"/>
+    <path d="M215 366 L468 392"/>
+  </g>
+
+  <!-- PRIVATE -->
+  <rect x="40" y="540" width="740" height="190" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="566" font-size="16" font-weight="700" fill="#450a0a">Private Implementation</text>
+  <g fill="#ffffff" stroke="#dc2626" stroke-width="1.5">
+    <rect x="58"  y="582" width="135" height="60" rx="8"/>
+    <rect x="205" y="582" width="135" height="60" rx="8"/>
+    <rect x="352" y="582" width="135" height="60" rx="8"/>
+    <rect x="58"  y="656" width="135" height="60" rx="8"/>
+    <rect x="205" y="656" width="135" height="60" rx="8"/>
+    <rect x="352" y="656" width="135" height="60" rx="8"/>
+  </g>
+  <g font-size="12.5" fill="#450a0a" text-anchor="middle">
+    <text x="125" y="608">Real Business</text><text x="125" y="626">Rules</text>
+    <text x="272" y="608">Live Agent</text><text x="272" y="626">Prompts</text>
+    <text x="419" y="608">Organizational</text><text x="419" y="626">Knowledge</text>
+    <text x="125" y="682">System</text><text x="125" y="700">Integrations</text>
+    <text x="272" y="691">Operational Data</text>
+    <text x="419" y="682">Internal</text><text x="419" y="700">Configurations</text>
+  </g>
+
+  <!-- branch results -->
+  <path d="M610 360 C 700 360, 740 230, 600 162" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="712" y="300" font-size="12.5" font-weight="700" fill="#16a34a">All Yes</text>
+  <path d="M610 395 C 700 430, 720 500, 600 538" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="712" y="470" font-size="12.5" font-weight="700" fill="#dc2626">Any No</text>
+
+  <!-- dotted mutual influence -->
+  <path d="M150 160 C 130 200, 130 500, 150 538" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+  <text x="30" y="350" font-size="11.5" fill="#64748b" transform="rotate(-90 30 350)">Provides structure for</text>
+</svg>

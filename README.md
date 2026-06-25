@@ -45,6 +45,10 @@ without exposing confidential operational information.
 
 ## 🏢 About EmprendHEC
 
+<p align="center">
+  <img src="assets/logos/Logo%20EmprendHEC%20PNG.png" alt="EmprendHEC — Comunidad de Emprendedores" width="360">
+</p>
+
 **EmprendHEC** is the organization where this framework originated and is actively validated in real operations.
 
 It is an education- and entrepreneurship-focused initiative whose mission is to **transform leaders, education, and communities through AI with purpose**. EmprendHEC runs an internal agentic ecosystem — built on the architecture-first, human-first principles described in this repository — to coordinate its own work, governance, and execution.

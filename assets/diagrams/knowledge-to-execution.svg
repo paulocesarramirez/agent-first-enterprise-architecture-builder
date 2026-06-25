@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 600" width="1180" height="600" font-family="'Segoe UI', Arial, sans-serif" role="img" aria-label="Knowledge to Execution flow">
+  <title>Knowledge to Execution</title>
+  <desc>Rendered export of examples/diagrams/knowledge-to-execution.mmd — how structured knowledge flows through governance and generation into governed execution, with a feedback loop.</desc>
+  <rect width="1180" height="600" fill="#ffffff"/>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- KNOWLEDGE -->
+  <rect x="20" y="60" width="220" height="480" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="40" y="88" font-size="16" font-weight="700" fill="#1e3a5f">Knowledge Layer</text>
+  <g fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"><rect x="45" y="110" width="170" height="70" rx="8"/><rect x="45" y="200" width="170" height="70" rx="8"/><rect x="45" y="290" width="170" height="70" rx="8"/><rect x="45" y="380" width="170" height="70" rx="8"/></g>
+  <g font-size="13" fill="#1e3a5f" text-anchor="middle"><text x="130" y="140">Organizational</text><text x="130" y="158">Principles</text><text x="130" y="240">Business Rules</text><text x="130" y="330">Process Docs</text><text x="130" y="412">Domain</text><text x="130" y="430">Knowledge</text></g>
+
+  <!-- GOVERNANCE -->
+  <rect x="320" y="90" width="220" height="360" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="340" y="118" font-size="16" font-weight="700" fill="#422006">Governance Layer</text>
+  <g fill="#ffffff" stroke="#ca8a04" stroke-width="1.5"><rect x="345" y="140" width="170" height="70" rx="8"/><rect x="345" y="240" width="170" height="70" rx="8"/><rect x="345" y="340" width="170" height="70" rx="8"/></g>
+  <g font-size="13" fill="#422006" text-anchor="middle"><text x="430" y="170">Agent Scope</text><text x="430" y="188">Definition</text><text x="430" y="282">Escalation Rules</text><text x="430" y="382">Human Owner</text></g>
+
+  <!-- GENERATION -->
+  <rect x="620" y="90" width="220" height="360" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="118" font-size="16" font-weight="700" fill="#14532d">Generation Layer</text>
+  <g fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><rect x="645" y="140" width="170" height="70" rx="8"/><rect x="645" y="240" width="170" height="70" rx="8"/><rect x="645" y="340" width="170" height="70" rx="8"/></g>
+  <g font-size="13" fill="#14532d" text-anchor="middle"><text x="730" y="170">Prompt with</text><text x="730" y="188">Knowledge Context</text><text x="730" y="270">AI Model</text><text x="730" y="288">Reasoning</text><text x="730" y="382">Structured Output</text></g>
+
+  <!-- EXECUTION -->
+  <rect x="920" y="60" width="240" height="480" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="940" y="88" font-size="16" font-weight="700" fill="#500724">Execution Layer</text>
+  <g fill="#ffffff" stroke="#db2777" stroke-width="1.5"><rect x="945" y="110" width="190" height="60" rx="8"/><rect x="945" y="360" width="190" height="60" rx="8"/><rect x="945" y="450" width="190" height="60" rx="8"/></g>
+  <!-- decision diamond -->
+  <polygon points="1040,200 1110,245 1040,290 970,245" fill="#ffffff" stroke="#db2777" stroke-width="1.5"/>
+  <g font-size="13" fill="#500724" text-anchor="middle"><text x="1040" y="146">Human Review</text><text x="1040" y="250">Approved?</text><text x="1040" y="384">Action in</text><text x="1040" y="402">Enterprise System</text><text x="1040" y="476">Escalate /</text><text x="1040" y="494">Revise</text></g>
+
+  <!-- Arrows: knowledge -> governance scope -->
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M215 145 C 270 160, 290 175, 343 175"/>
+    <path d="M215 235 C 280 220, 300 185, 343 178"/>
+    <path d="M215 325 C 280 280, 300 200, 343 182"/>
+    <path d="M215 415 C 285 360, 300 220, 343 186"/>
+    <!-- gov internal -->
+    <path d="M430 210 L430 238"/>
+    <path d="M430 310 L430 338"/>
+    <!-- scope -> prompt -->
+    <path d="M515 175 C 580 178, 600 178, 643 178"/>
+    <path d="M515 282 C 560 250, 590 200, 643 192"/>
+    <!-- generation chain -->
+    <path d="M730 210 L730 238"/>
+    <path d="M730 310 L730 338"/>
+    <!-- output -> human review -->
+    <path d="M815 375 C 870 300, 900 160, 943 142"/>
+    <!-- review -> decision -->
+    <path d="M1040 170 L1040 198"/>
+  </g>
+
+  <!-- Yes / No branches -->
+  <path d="M1040 290 L1040 358" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="1052" y="328" font-size="12" font-weight="700" fill="#16a34a">Yes</text>
+  <path d="M1010 285 C 980 330, 980 410, 1010 452" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="958" y="375" font-size="12" font-weight="700" fill="#dc2626">No</text>
+
+  <!-- feedback: escalate/revise -> prompt -->
+  <path d="M945 480 C 700 560, 760 470, 745 412" stroke="#9333ea" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#a)"/>
+  <text x="690" y="552" font-size="12" font-weight="600" fill="#9333ea">feedback loop</text>
+</svg>
