@@ -10,6 +10,7 @@ This folder contains the standard structures and illustrative examples for desig
 |------|-------------|
 | [`common-agent-contract.md`](common-agent-contract.md) | The standard structure every agent must follow |
 | [`public-agent-template.md`](public-agent-template.md) | A blank template for designing new agents |
+| [`human-orchestrated-multi-agent-pattern.md`](human-orchestrated-multi-agent-pattern.md) | Human-led multi-agent orchestration pattern |
 
 ### Illustrated Examples
 

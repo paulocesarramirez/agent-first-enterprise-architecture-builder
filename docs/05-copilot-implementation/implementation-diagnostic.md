@@ -61,6 +61,11 @@ Which best describes how you'd like to build?
 - Which area do you want to start with (e.g., commercial, projects, editorial/content, finance, legal)?
 - Are you starting fresh, or do you already have documented processes/guides?
 
+### 8. Cost and licensing posture
+- What budget posture best fits your first phase (pilot, controlled scale, broad rollout)?
+- Which cost model is more acceptable today: per-seat (M365 Copilot), message capacity (Copilot Studio), or consumption (Azure)?
+- Any hard licensing constraints we must respect for the initial path?
+
 ---
 
 ## Part B — Decision table (answers → recommended path)
@@ -87,7 +92,7 @@ Use the **first** row that matches, then confirm with the user:
 | Is unsure, but has Microsoft 365 Copilot | **No-Code** to start (it is the lowest-risk entry; you can grow into Hybrid) |
 | Has no Microsoft 365 Copilot and no Azure today | Start with the **Knowledge layer only** (structure the source of truth in SharePoint), then revisit paths once licensing is in place |
 
-> **Note on licensing:** Copilot recommends a path; it does not provision licenses. If a prerequisite is missing, say so plainly and offer the closest path the user *can* start today (often the Knowledge layer plus No-Code).
+> **Note on licensing and cost:** Copilot recommends a path; it does not provision licenses. If a prerequisite is missing, say so plainly and offer the closest path the user *can* start today (often the Knowledge layer plus No-Code). Include cost trade-offs (per-seat vs message capacity vs consumption) in the recommendation rationale.
 
 ---
 
@@ -103,6 +108,7 @@ Diagnostic summary for [YourOrg]
 - Azure / AI Foundry: [yes/no]
 - Power Platform / Fabric: [yes/no]
 - Preferred style: [No-Code / Low-Code / Pro-Code / Hybrid]
+- Cost posture: [per-seat / message capacity / consumption / mixed]
 - Starting area: [e.g., Commercial]
 - Starting point: [fresh / existing docs]
 

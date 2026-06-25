@@ -161,7 +161,7 @@ Agents are governed components that:
 - respect boundaries
 - remain subordinate to human judgment in strategic matters
 
-### 3. Generation Layer
+### 3. Capability Generation Layer
 From architecture to execution:
 
 - workflows can be generated
@@ -240,7 +240,7 @@ The framework is the reusable layer; your organization supplies its own knowledg
 
 Additional agents can be added under the same architecture and governance model.
 
-Planned examples for future extension include:
+Planned examples for future extension are tracked in [`ROADMAP.md`](./ROADMAP.md), including:
 
 - Accountant Agent
 - Legal Agent

@@ -26,13 +26,13 @@ Copilot should then:
 You are reproducing the framework's four layers in **your** environment:
 
 ```
-Knowledge  →  Governance  →  Generation  →  Execution
+Knowledge  →  Governance  →  Capability Generation  →  Execution
 (source of    (shared agent   (build your    (run inside
  truth in      contract)       agents)        Microsoft 365)
  SharePoint)
 ```
 
-The repository gives you the **patterns and templates** for each layer. The path you chose only changes **how you build the Generation layer** (the agents themselves). Layers 1, 2, and 4 are largely the same across paths.
+The repository gives you the **patterns and templates** for each layer. The path you chose only changes **how you build the Capability Generation layer** (the agents themselves). Layers 1, 2, and 4 are largely the same across paths.
 
 ---
 
@@ -83,7 +83,7 @@ Now continue to **Part 2** for your path.
 
 ---
 
-## Part 2 — Path-specific build (the Generation layer)
+## Part 2 — Path-specific build (the Capability Generation layer)
 
 ### 🟢 No-Code track — Declarative agents
 
@@ -167,6 +167,25 @@ Reference: [../02-framework/microsoft-execution-layer.md](../02-framework/micros
 
 Reference: [../01-principles/governance-and-evolution.md](../01-principles/governance-and-evolution.md).
 
+### Step 5.5 — Observability and evaluation (all paths, required)
+
+Observability is a governance requirement for **No-Code, Low-Code, and Pro-Code** alike.
+
+- Define a minimum telemetry set: requests, outputs, escalations, human approvals, and incidents.
+- Keep audit logs for governance review and incident response.
+- Run continuous evaluation against quality, scope integrity, and human-oversight compliance.
+- Use the same evaluation posture across every build surface.
+
+### Step 5.6 — Cost and licensing governance
+
+Before scaling, validate cost fit for your chosen path:
+
+- **M365 Copilot per-seat** (predictable seat-based productivity use)
+- **Copilot Studio message capacity** (conversation/action volume sensitivity)
+- **Azure consumption** (pro-code flexibility with variable usage cost)
+
+Revisit path selection if capability fit and budget fit diverge.
+
 ### Step 6 — Expand the ecosystem
 
 Repeat Steps 3 → 5 for the next area (projects, editorial, finance, legal). Each new agent reuses the same knowledge base and governance contract — this is how the system scales coherently.
@@ -191,4 +210,6 @@ You have implemented the framework when:
 - [repo-implementation-guidelines.md](repo-implementation-guidelines.md) — the overall entry point
 - [safe-scaffolding-instructions.md](safe-scaffolding-instructions.md) — how to keep everything public-safe
 - [naming-conventions.md](naming-conventions.md) — file and folder naming
+- [model-and-build-surface-selection.md](model-and-build-surface-selection.md) — model and surface guidance
+- [../02-framework/value-and-metrics.md](../02-framework/value-and-metrics.md) — value measurement pattern
 - [../00-overview/architecture-overview.md](../00-overview/architecture-overview.md) — the layered model

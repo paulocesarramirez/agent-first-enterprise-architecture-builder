@@ -210,3 +210,13 @@ The four layers are:
 Architecture comes first.
 
 Execution comes last.
+
+
+---
+
+## Related documents
+
+- [security-and-compliance-layer.md](security-and-compliance-layer.md)
+- [responsible-ai-and-governance-hierarchy.md](responsible-ai-and-governance-hierarchy.md)
+- [human-in-the-loop-risk-and-failure-governance.md](human-in-the-loop-risk-and-failure-governance.md)
+- [value-and-metrics.md](value-and-metrics.md)

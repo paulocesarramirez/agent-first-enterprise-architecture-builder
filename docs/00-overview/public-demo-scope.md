@@ -60,7 +60,7 @@ The `Agentes/` folder holds the documents every agent inherits: the architecture
 
 ---
 
-### 3. Generation layer — how an agent is designed
+### 3. Capability Generation layer — how an agent is designed
 
 Each agent is defined by a public-safe design document: executive summary, knowledge sources, parameters and limits, expected behavior, and test cases. The instruction prompt itself stays private.
 
@@ -70,7 +70,7 @@ Each agent is defined by a public-safe design document: executive summary, knowl
 
 ---
 
-### 4. Generation layer — the agents published in Microsoft 365
+### 4. Capability Generation layer — the agents published in Microsoft 365
 
 The agents are published in the Microsoft 365 Copilot Agent Store, where the team invokes them as part of normal work.
 

@@ -98,7 +98,7 @@ Or embed using a Mermaid code block directly in a markdown file for inline rende
 ```mermaid
 flowchart TD
     A[Knowledge Layer] --> B[Governance Layer]
-    B --> C[Generation Layer]
+    B --> C[Capability Generation Layer]
     C --> D[Execution Layer]
 ```
 ````
